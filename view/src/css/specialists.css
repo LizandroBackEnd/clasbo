@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.filaEspecialistas1 {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2px;
+}
+
+#especialistas {
+  font-size: 28px;
+  text-align: center;
+  color: #000000;
+}
+
+#descripcion-especialistas-h2 {
+  font-size: 20px;
+  font-weight: lighter;
+  text-align: center;
+  color: #000000;
+}
+
+#descripcion-especialistas-h3 {
+  font-size: 20x;
+  font-weight: lighter;
+  text-align: center;
+  color: #0078A0;
+}
+
+.especialistas {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 20px; /* Espacio entre tarjetas */
+  padding: 5px; /* Espacio alrededor del contenedor */
+  max-width: 1200px;
+  margin: 0 auto; /* Centrado horizontal */
+}
+
+.especialista-card {
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  width: 250px; /* Tamaño fijo */
+  min-height: 300px; /* Altura mínima para unificar el tamaño de las tarjetas */
+  padding: 15px;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+  display: flex;
+  flex-direction: column;
+}
+
+.especialista-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: contain; /* Recorta la imagen si es muy grande */
+  margin: 10px auto 10px auto; /* Centrada y con separación inferior */
+  border: 1px solid #d9d9d9;
+  transition: transform 0.3s ease;
+  background-color: #ffffff;
+}
+
+.especialista-card img:hover {
+  transform: scale(1.1); /* Esto hace que la imagen crezca un 10% */
+  cursor: pointer; /* Cambia el cursor para que parezca seleccionable */
+}
+
+.especialista-card h2 {
+  margin: 10px 0 5px 0;
+  font-size: 18px;
+  min-height: 40px; /* Espacio mínimo para el título (para alinear tarjetas) */
+}
+
+.especialista-card p {
+  margin: 5px 0;
+  font-size: 14px;
+  min-height: 40px;
+}
+
+.btn-ver {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #0078A0;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.iconos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Espacio entre iconos */
+  margin-top: 10px;
+}
+
+.fa-facebook-e {
+  color: #3b5998 !important; /* Color de Facebook */
+  transition: color 0.3s ease;
+}
+
+.fa-instagram-e {
+  color: #e1306c !important; /* Color de Instagram */
+  transition: color 0.3s ease;
+}
+
+.fa-whatsapp-e {
+  color: #25D366 !important; /* Color de WhatsApp */
+  transition: color 0.3s ease;
+}
+
+.iconos i:hover {
+  transform: scale(1.6); /* Aumenta el tamaño del icono al pasar el cursor */
+}
+
+/* detalle especialista */
+
+.filaEspecialistas2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.contenedor-imagen {
+ max-width: 200px;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.contenedor-imagen img {
+  width: 50%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.detalle-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.detalle-container2 {
+  background: linear-gradient(135deg, #003366, #00113D);
+  border-radius: 15px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  padding: 30px;
+}
+
+.detalle-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.detalle-texto h1 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.detalle-texto h2 {
+  font-size: 22px;
+  color: #B2E4F2;
+  margin-bottom: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.detalle-texto p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.btn-volver {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #B2E4F2;
+  color: #00113D;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-volver:hover {
+  background-color: #ffffff;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}

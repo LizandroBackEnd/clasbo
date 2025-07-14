@@ -1,13 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Holi</h1>
-    <h2>Hola chicos</h2>
-    <h3>Estan chavos chavos</h3>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clínica Dental Clasbo</title>
+    <link rel="stylesheet" href="./src/css/index.css" />
+    <link rel="stylesheet" href="formulario.css">
+    <script
+      src="https://kit.fontawesome.com/0edb134f6f.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header class="header">
+      <img src="./src/img/logo.png" alt="Clasbo+" />
+      <h1>Clínica Dental Clasbo</h1>
+      <div class="clearfix"></div>
+      <nav>
+        <a href="./index.html"> <i class="fas fa-home"></i> Inicio </a>
+        <a href="./services.html"> <i class="fas fa-tooth"></i> Servicios </a>
+        <a href="./specialists.html">
+          <i class="fas fa-stethoscope"></i> Especialistas
+        </a>
+        <a href="#"> <i class="fas fa-users"></i> Sobre nosotros </a>
+        <a href="#"> <i class="fas fa-calendar-alt"></i> Citas </a>
+        <a id="iniciar" href="form_sesion.html"><i class="fas fa-user"></i> Iniciar Sesión </a>
+      </nav>
+    </header>
+    <!--Contenido-->
+    <!--Banner-->
+    <div class="banner">
+      <img src="./src/img/banner.svg" alt="Banner de la clínica" />
+    </div>
+    <div class="contenido">
+      <h2 id="servicios-dentales">Servicios más populares</h2>
+      <br />
+      <p>
+        En <strong>Clínica Dental Clasbo</strong> ofrecemos una amplia gama de
+        servicios dentales para cuidar de tu salud bucal.
+      </p>
+      <br />
+      <p>
+        Explora nuestra galería de servicios para conocer más sobre lo que
+        ofrecemos y cómo podemos ayudarte a mantener una sonrisa saludable.
+      </p>
+    </div>
+    <!--Galeria de Productos-->
+    <!--Primera Fila-->
+    <div class="fila">
+      <!--Primera Columna-->
+      <div class="columna">
+        <div class="galeria">
+          <a class="enlace" href="conservicios1.html">
+            <img src="./src/img/services/profilaxis.png" alt="Servicio1" />
+            <div class="detalle">
+              <p>Profilaxis Dental</p>
+              <p id="precio">$1,000</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!--Segunda Columna-->
+      <div class="columna">
+        <div class="galeria">
+          <a class="enlace" href="conservicios2.html">
+            <img src="imagenes/cirugia_dental.png" alt="Servicio2" />
+            <div class="detalle">
+              <p>Cirugía Dental</p>
+              <p id="precio">$2,000</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!--Tercera Columna-->
+      <div class="columna">
+        <div class="galeria">
+          <a class="enlace" href="conservicios3.html">
+            <img src="imagenes/patologia.png" alt="Servicio3" />
+            <div class="detalle">
+              <p>Patología y análisis</p>
+              <p id="precio">$2,000</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!--Cuarta Columna-->
+      <div class="columna">
+        <div class="galeria">
+          <a class="enlace" href="conservicios4.html">
+            <img src="imagenes/protesis.png" alt="Servicio4" />
+            <div class="detalle">
+              <p>Prótesis removible</p>
+              <p id="precio">$8,500</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <!--clearfix, técnica usada para limpiar los "floats" 
+    (elementos flotantes) dentro de un contenedor, asegurando que este contenedor envuelva 
+    correctamente a sus elementos hijos flotados. -->
+    <!--Segunda Fila-->
+    <div class="fila">
+      <!--Primera Columna-->
+      <div class="columna">
+        <div class="galeria">
+          <a class="enlace" href="conservicios5.html">
+            <img src="imagenes/extraccion.png" alt="Servicio5" />
+            <div class="detalle">
+              <p>Extracción de muela</p>
+              <p id="precio">$1,500</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!--Segunda Columna-->
+      <div class="columna">
+        <div class="galeria">
+          <a class="enlace" href="conservicios6.html">
+            <img src="imagenes/endodoncia.png" alt="Servicio6" />
+            <div class="detalle">
+              <p>Endodoncia</p>
+              <p id="precio">$2,000</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!--Tercera Columna-->
+      <div class="columna">
+        <div class="galeria">
+          <a class="enlace" href="conservicios7.html">
+            <img src="imagenes/peridoncia.png" alt="Servicio7" />
+            <div class="detalle">
+              <p>Peridodoncia</p>
+              <p id="precio">$3,000</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!--Cuarta Columna-->
+      <div class="columna">
+        <div class="galeria">
+          <a class="enlace" href="conservicios8.html">
+            <img src="imagenes/implante.png" alt="Servicio8" />
+            <div class="detalle">
+              <p>Implante Dental</p>
+              <p id="precio">$5,000</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <section class="seccion">
+      <h2>Contáctanos</h2>
+      <p>
+        Si tienes alguna pregunta o necesitas más información, no dudes en
+        contactarnos.
+      </p>
+      <p>
+        Estamos aquí para ayudarte a lograr una sonrisa saludable
+        y hermosa.
+      </p><br>
+      <h2>Horarios de atención:</h2><br>
+      <p>
+        Lunes a Viernes: 9:00 AM - 6:00 PM <br />
+        Sábados: 9:00 AM - 2:00 PM <br />
+        Domingos: Cerrado
+      </p>
+    </section>
+    <section class="contacto">
+      <div class="formulario-contenedor">
+        <form class="formulario">
+        <h2>Formulario de contacto</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required />
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu teléfono" required />
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required />
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Ingresa tu mensaje" required></textarea>
+        
+        <button type="submit">Enviar</button>
+        </form>
+      </div>
+      <div class="mapa">
+        <h2>Mapa de ubicación</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.972283583079!2d-99.09504402622441!3d19.41360348186173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fdea8603122d%3A0x61bcd0473bd539fa!2sCl%C3%ADnica%20Dental%20Clasbo!5e0!3m2!1ses!2smx!4v1751855526083!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+    <footer class="footer">
+      <table>
+        <!--Tiene 3 etiquetas, tr (fila), th (encabezado columna), td (columna contenido)-->
+        <tr>
+          <th>Clínica Dental Clasbo</th>
+          <th>Redes Sociales</th>
+          <th>Copyright</th>
+        </tr>
+        <tr>
+          <td>
+            <i class="fas fa-map-marker-alt"></i> 
+            Av. 8 Esq. C. 29 C, Ignacio
+            Zaragoza, Venustiano Carranza, <br />
+            15000 Ciudad de México, CDMX <br />
+            <i class="fas fa-phone"></i> Teléfono: 55 3565 9327 <br />
+          </td>
+          <td>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+          </td>
+          <td>
+            <ul>
+              <li>&#169; Isabel Mérida, 2025</li>
+              <li>
+                <a class="whatsapp" href="https://wa.me/525619298976" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+              </li>
+              <li><i class="fas fa-envelope"></i> Email:</li>
+              <li>
+                <a class="correo" href="mailto:Isa.Meryda@outlook.com">Isa.Meryda@outlook.com</a>
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </footer>
+  </body>
 </html>
