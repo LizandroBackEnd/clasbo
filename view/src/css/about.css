@@ -10,7 +10,7 @@
 }
 
 .header h1{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'Roboto', sans-serif;
     font-size: 3vw;
     color: #0078a0;
     text-align: left;
@@ -33,7 +33,7 @@
 }
 
 .header a{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1vw;
     color: #FFFFFF;
     float: left;
@@ -68,12 +68,31 @@
 .sobrenosotros{
     width: 100%;
     height: auto;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1vw;
     text-align: center;
     letter-spacing: 0.5px;
     color: #000;
     margin: 1%;
+}
+
+.sobrenosotros h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0078a0;
+    text-align: center;
+    letter-spacing: 0.5px;
+    margin-top: 5%;
+}
+
+.sobrenosotros p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6vw;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #000;
+    padding: 2%;
 }
 
 .filasn {
@@ -109,7 +128,7 @@
 .detallesn{
     width: 100%;
     height: auto;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.2vw;
     text-align: left;
     letter-spacing: 0.5px;
@@ -121,11 +140,12 @@
 }
 
 .negritas{
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
 }
 
 #nombre{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.5vw;
     font-weight: bold; 
     text-align: left;
@@ -134,7 +154,7 @@
 
 #botcontact{
     width: 80%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1vw;
     text-align: center;
     background-color: #B2E4F2;
@@ -152,7 +172,7 @@
     margin-top: 5%;
     background-color: #B2E4F2 ;
     color: black;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.2vw;
     letter-spacing: normal;
     float: left;
@@ -172,12 +192,12 @@
 .titulo-servicio {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #333;
+    color: #000000;
 }
 
 .descripcion-servicio {
     font-size: 1rem;
-    color: #666;
+    color: #000000;
     margin-top: 10px;
 }
 
@@ -204,7 +224,7 @@
 .seccion-mision-vision {
     text-align: center;
     padding: 40px 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -239,12 +259,12 @@
 .tarjeta h3 {
     font-size: 1.8rem;
     margin-bottom: 15px;
-    color: #333;
+    color: #000000;
 }
 
 .tarjeta p {
     font-size: 1rem;
-    color: #555;
+    color: #000000;
     text-align: justify;
 }
 
