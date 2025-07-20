@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f2f2f2;
+}
+
+.screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1.5rem;
+  background-color: #fff;
+  color: #0078a0; 
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0078a0;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.login-container {
+  background-color: #d9d9d9;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 40px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.login-container h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.login-subtitle {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+}
+
+.input-group i {
+  margin-right: 10px;
+  color: #555;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0077a6;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #005f85;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.register-link a {
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+.form-feedback {
+  display: none;
+  padding: 12px 20px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  user-select: none;
+  text-align: center;
+}
+
+/* Mensaje de error en rojo */
+.form-feedback.error {
+  background-color: #f8d7da;
+  color: #842029;
+  border: 1px solid #f5c2c7;
+}
+
+/* Mensaje de éxito en verde */
+.form-feedback.success {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  border: 1px solid #badbcc;
+}
+
+/* Mensaje informativo en azul */
+.form-feedback.info {
+  background-color: #cff4fc;
+  color: #055160;
+  border: 1px solid #b6effb;
+}

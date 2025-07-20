@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/c6e5683dc9.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" type="image/png" href="../../img/logo.png" />
+    <link rel="stylesheet" href="../src/css/register.css" />
+    <title>Registro - Clínica Dental Clasbo</title>
+  </head>
+  <body>
+    <div class="screen">
+      <div class="register-container">
+        <h2>Regístrate</h2>
+        <p class="register-subtitle">Por favor regístrate</p>
+
+        <!-- Mensajes dinámicos -->
+        <div id="form-feedback" class="form-feedback"></div>
+
+        <form id="register-form">
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Nombre(s)" name="name" required />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input
+              type="text"
+              placeholder="Apellido paterno"
+              name="last_name"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input
+              type="text"
+              placeholder="Apellido materno"
+              name="second_last_name"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input
+              type="email"
+              placeholder="Correo electrónico"
+              name="email"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-calendar-alt"></i>
+            <input
+              type="date"
+              placeholder="Fecha de nacimiento"
+              name="date"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input
+              type="password"
+              placeholder="Contraseña"
+              name="password"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input
+              type="password"
+              placeholder="Confirmar contraseña"
+              name="confirm_password"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-phone"></i>
+            <input
+              type="text"
+              placeholder="Teléfono"
+              name="phone"
+              required
+            />
+          </div>
+          <button type="submit" class="register-button">Registrarse</button>
+        </form>
+
+        <div class="login-link">
+          <p>¿Ya tienes una cuenta? <a href="./login.html">Iniciar sesión</a></p>
+        </div>
+      </div>
+    </div>
+    <script src="./js/register.js"></script>
+  </body>
+</html>
