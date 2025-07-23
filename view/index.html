@@ -7,13 +7,29 @@
     <link rel="stylesheet" href="./css/index.css" />
     <script
       src="https://kit.fontawesome.com/0edb134f6f.js"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header class="header">
-      <img src="./src/img/logo.png" alt="Clasbo+" />
-      <h1>Clínica Dental Clasbo</h1>
-      <div class="clearfix"></div>
+      <div class="header_container">
+        <div class="header_logotext">
+        <img src="./src/img/logo.png" alt="Clasbo+" />
+        <h1>Clínica Dental Clasbo</h1>
+      </div>
+
+      <div
+        class="menu-alterno"
+        id="menu-alterno"
+        aria-label="Abrir menú"
+        role="button"
+        tabindex="0"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <nav>
         <a href="./index.html"> <i class="fas fa-home"></i> Inicio </a>
         <a href="#"> <i class="fas fa-tooth"></i> Servicios </a>
@@ -23,7 +39,9 @@
         <a href="#"> <i class="fas fa-calendar-alt"></i> Citas </a>
         <a id="iniciar" href="./login.html"><i class="fas fa-user"></i> Iniciar Sesión </a>
       </nav>
+      </div>
     </header>
+    <div class="clearfix"></div>
     <!--Contenido-->
     <!--Banner-->
     <div class="banner">
@@ -31,96 +49,110 @@
     </div>
     <div class="contenido">
       <h2 id="servicios-dentales">Servicios más populares</h2>
-      <br />
       <p>
-        En <strong>Clínica Dental Clasbo</strong> ofrecemos una amplia gama de
-        servicios dentales para cuidar de tu salud bucal. 
+        En Clínica Dental Clasbo trabajamos con pasión y compromiso para cuidar
+        tu sonrisa. Combinando tecnología, experiencia profesional y trato
+        humano para ofrecerte una atención dental integral, adaptada a tus
+        necesidades y estilo de vida.
       </p>
       <p>
-        Explora nuestra galería de servicios para conocer más sobre lo que
-        ofrecemos y cómo podemos ayudarte a mantener una sonrisa saludable.
+        Conoce los tratamientos más solicitados en Clínica Dental Clasbo. ¡Tu
+        sonrisa merece lo mejor!
       </p>
     </div>
     <!--Galeria de Productos-->
-    <!--Primera Fila-->
     <section class="gallery" id="gallery">
-    <h1>Conoce nuestros servicios</h1>
-    <div class="gallery-grid">
-      <a href="./detail-service.html?img=1.png&title=Limpieza%20Dental&desc=Elimina%20placa%2C%20sarro%20y%20manchas%20mientras%20previenes%20enfermedades%20dentales%20con%20nuestra%20limpieza%20profunda%20realizada%20por%20especialistas." class="card">
-        <div class="card-front">
-          <img src="./src/img/services/cirugia_dental.png" alt="1" />
-        </div>
-        <div class="card-back">
-          <h3>Limpieza dental</h3>
-          <p>Elimina placa, sarro y manchas mientras previenes enfermedades dentales con nuestra limpieza profunda realizada por especialistas.</p>
-        </div>
-      </a>
-      <a href="#gallerygallery" class="card">
-        <div class="card-front">
-          <img src="./src/img/services/patologia.png" alt="2" />
-        </div>
-        <div class="card-back">
-          <h3>Ortodoncia</h3>
-          <p>Corrige la posición de tus dientes con tratamientos especializados</p>
-        </div>
-      </a>
-      <a href="#gallery" class="card">
-        <div class="card-front">
-          <img src="./src/img/services/protesis.png" alt="3" />
-        </div>
-        <div class="card-back">
-          <h3>Endodoncia</h3>
-          <p>Tratamiento de conductos para salvar tus piezas dentales</p>
-        </div>
-      </a>
-      <a href="#gallery" class="card">
-        <div class="card-front">
-          <img src="./src/img/services/extraccion.png" alt="4" />
-        </div>
-        <div class="card-back">
-          <h3>Resinas y Empastes</h3>
-          <p>Recupera la estructura de tus dientes con resinas</p>
-        </div>
-      </a>
-      <a href="#gallery" class="card">
-        <div class="card-front">
-          <img src="./src/img/services/endodoncia.png" alt="5" />
-        </div>
-        <div class="card-back">
-          <h3>Extracciones</h3>
-          <p>Extracciones dentales con el máximo cuidado y profesionalismo</p>
-        </div>
-      </a>
-      <a href="#gallery" class="card">
-        <div class="card-front">
-          <img src="./src/img/services/peridoncia.png" alt="6" />
-        </div>
-        <div class="card-back">
-          <h3>Blanqueamiento Dental</h3>
-          <p>Devuelve la blancura natural a tu sonrisa</p>
-        </div>
-      </a>
-      <a href="#gallery" class="card">
-        <div class="card-front">
-          <img src="./src/img/services/implante.png" alt="7" />
-        </div>
-        <div class="card-back">
-          <h3>Radiografías</h3>
-          <p>Diagnóstico preciso con radiografías dentales</p>
-        </div>
-      </a>
-      <a href="./detail-service.html?img=8.png&title=Prótesis%20Dentales&desc=Recupera%20la%20funcionalidad%20y%20estética%20de%20tu%20sonrisa%20con%20soluciones%20personalizadas%20y%20cómodas." class="card">
-        <div class="card-front">
-          <img src="./src/img/services/profilaxis.png" alt="8" />
-        </div>
-        <div class="card-back">
-          <h3>Prótesis Dentales</h3>
-          <p>Recupera la funcionalidad y estética de tu sonrisa con soluciones personalizadas y cómodas.</p>
-        </div>
-      </a>
-
-    </div>
-  </section>
+      <h1>Conoce nuestros servicios</h1>
+      <div class="gallery-grid">
+        <a
+          href="./detail-service.html?img=1.png&title=Limpieza%20Dental&desc=Elimina%20placa%2C%20sarro%20y%20manchas%20mientras%20previenes%20enfermedades%20dentales%20con%20nuestra%20limpieza%20profunda%20realizada%20por%20especialistas."
+          class="card"
+        >
+          <div class="card-front">
+            <img src="./src/img/services/cirugia_dental.png" alt="1" />
+          </div>
+          <div class="card-back">
+            <h3>Limpieza dental</h3>
+            <p>
+              Elimina placa, sarro y manchas mientras previenes enfermedades
+              dentales con nuestra limpieza profunda realizada por
+              especialistas.
+            </p>
+          </div>
+        </a>
+        <a href="#gallerygallery" class="card">
+          <div class="card-front">
+            <img src="./src/img/services/patologia.png" alt="2" />
+          </div>
+          <div class="card-back">
+            <h3>Ortodoncia</h3>
+            <p>
+              Corrige la posición de tus dientes con tratamientos especializados
+            </p>
+          </div>
+        </a>
+        <a href="#gallery" class="card">
+          <div class="card-front">
+            <img src="./src/img/services/protesis.png" alt="3" />
+          </div>
+          <div class="card-back">
+            <h3>Endodoncia</h3>
+            <p>Tratamiento de conductos para salvar tus piezas dentales</p>
+          </div>
+        </a>
+        <a href="#gallery" class="card">
+          <div class="card-front">
+            <img src="./src/img/services/extraccion.png" alt="4" />
+          </div>
+          <div class="card-back">
+            <h3>Resinas y Empastes</h3>
+            <p>Recupera la estructura de tus dientes con resinas</p>
+          </div>
+        </a>
+        <a href="#gallery" class="card">
+          <div class="card-front">
+            <img src="./src/img/services/endodoncia.png" alt="5" />
+          </div>
+          <div class="card-back">
+            <h3>Extracciones</h3>
+            <p>Extracciones dentales con el máximo cuidado y profesionalismo</p>
+          </div>
+        </a>
+        <a href="#gallery" class="card">
+          <div class="card-front">
+            <img src="./src/img/services/peridoncia.png" alt="6" />
+          </div>
+          <div class="card-back">
+            <h3>Blanqueamiento Dental</h3>
+            <p>Devuelve la blancura natural a tu sonrisa</p>
+          </div>
+        </a>
+        <a href="#gallery" class="card">
+          <div class="card-front">
+            <img src="./src/img/services/implante.png" alt="7" />
+          </div>
+          <div class="card-back">
+            <h3>Radiografías</h3>
+            <p>Diagnóstico preciso con radiografías dentales</p>
+          </div>
+        </a>
+        <a
+          href="./detail-service.html?img=8.png&title=Prótesis%20Dentales&desc=Recupera%20la%20funcionalidad%20y%20estética%20de%20tu%20sonrisa%20con%20soluciones%20personalizadas%20y%20cómodas."
+          class="card"
+        >
+          <div class="card-front">
+            <img src="./src/img/services/profilaxis.png" alt="8" />
+          </div>
+          <div class="card-back">
+            <h3>Prótesis Dentales</h3>
+            <p>
+              Recupera la funcionalidad y estética de tu sonrisa con soluciones
+              personalizadas y cómodas.
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
     <div class="clearfix"></div>
     <footer class="footer">
       <table>
@@ -132,10 +164,16 @@
         </tr>
         <tr>
           <td>
-            <i class="fas fa-map-marker-alt"></i> 
-            Av. 8 Esq. C. 29 C, Ignacio
-            Zaragoza, Venustiano Carranza, <br />
-            15000 Ciudad de México, CDMX <br />
+            <i class="fas fa-map-marker-alt"></i>
+            <a
+              href="https://maps.app.goo.gl/dtcW8Vk9sLSRdM9V6"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              Av. 8 Esq. C. 29 C, Ignacio Zaragoza, Venustiano Carranza, <br />
+              15000 Ciudad de México, CDMX
+            </a>
+            <br />
             <i class="fas fa-phone"></i> Teléfono: 55 3565 9327 <br />
           </td>
           <td>
@@ -147,16 +185,32 @@
             <ul>
               <li>&#169; EDT - Elite Development Team, 2025</li>
               <li>
-                <a class="whatsapp" href="https://wa.me/525619298976" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                <a
+                  class="whatsapp"
+                  href="https://wa.me/525619298974"
+                  target="_blank"
+                  ><i class="fa-brands fa-whatsapp"></i> WhatsApp</a
+                >
               </li>
               <li><i class="fas fa-envelope"></i> Email:</li>
               <li>
-                <a class="correo" href="mailto:Isa.Meryda@outlook.com">edt2025@outlook.com</a>
+                <a class="correo" href="mailto:contacto@edt.com"
+                  >contacto@edt.com</a
+                >
               </li>
             </ul>
           </td>
         </tr>
       </table>
     </footer>
+    <script>
+      // Script para el menú alternativo
+      const menuToggle = document.getElementById("menu-alterno");
+      const nav = document.querySelector('.header nav');
+
+      menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
