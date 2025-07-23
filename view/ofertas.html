@@ -12,23 +12,39 @@
   </head>
   <body>
     <header class="header">
-      <img src="src/img/logo.png" alt="Clasbo+" />
-      <h1>Clínica Dental Clasbo</h1>
-      <div class="clearfix"></div>
+      <div class="header_container">
+        <div class="header_logotext">
+        <img src="img/logo.png" alt="Clasbo+" />
+        <h1>Clínica Dental Clasbo</h1>
+      </div>
+
+      <div
+        class="menu-alterno"
+        id="menu-alterno"
+        aria-label="Abrir menú"
+        role="button"
+        tabindex="0"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <nav>
         <a href="./index.html"> <i class="fas fa-home"></i> Inicio </a>
-        <a href=""> <i class="fas fa-tooth"></i> Servicios </a>
-        <a href=""><i class="fas fa-stethoscope"></i> Especialistas</a>
+        <a href="#"> <i class="fas fa-tooth"></i> Servicios </a>
+        <a href="#"><i class="fas fa-stethoscope"></i> Especialistas</a>
         <a href="./ofertas.html"><i class="fas fa-tags"></i> Ofertas</a>
         <a href="./sobrenosotros.html"> <i class="fas fa-users"></i> Sobre nosotros </a>
         <a href="#"> <i class="fas fa-calendar-alt"></i> Citas </a>
         <a id="iniciar" href="./login.html"><i class="fas fa-user"></i> Iniciar Sesión </a>
       </nav>
+      </div>
     </header>
     <!--Contenido-->
     <!--Banner-->
     <div class="banner">
-      <img src="src/img/ofertas/banner2.svg" alt="Banner de la clínica" />
+      <img src="img/ofertas/banner2.svg" alt="Banner de la clínica" />
     </div>
     <div class="contenido">
       <h2 id="servicios-dentales">"Cuidamos tu sonrisa como si fuera la nuestra"</h2>
@@ -39,22 +55,22 @@
         <div class="cont_ofertas">
             <div class="ofertas">
               <a class="enlace" href="ofertas1.html">
-                <img src="src/img/ofertas/blanqueamiento.png" alt="Oferta 1">
+                <img src="img/ofertas/blanqueamiento.png" alt="Oferta 1">
               </a>
             </div>
             <div class="ofertas">
               <a class="enlace" href="ofertas2.html">
-                <img src="src/img/ofertas/limpieza.png" alt="Oferta 2">
+                <img src="img/ofertas/limpieza.png" alt="Oferta 2">
               </a>
             </div>
             <div class="ofertas">
               <a class="enlace" href="ofertas3.html">
-                <img src="src/img/ofertas/ortodoncia.png" alt="Oferta 3">
+                <img src="img/ofertas/ortodoncia.png" alt="Oferta 3">
               </a>
             </div>
             <div class="ofertas">
               <a class="enlace" href="ofertas4.html">
-                <img src="src/img/ofertas/implante_ofer.png" alt="Oferta 4">
+                <img src="img/ofertas/implante_ofer.png" alt="Oferta 4">
               </a>
             </div>
         </div>
@@ -65,7 +81,7 @@
       <div class="columnaP">
         <div class="galeriaP">
           <a class="enlace" href="ofertas5.html">
-            <img src="src/img/ofertas/resinas_pro.png" alt="Oferta 5" />
+            <img src="img/ofertas/resinas_pro.png" alt="Oferta 5" />
             <div class="detalleP">
               <h2>Resinas</h2>
               <p> Antes $1,300</p>
@@ -79,7 +95,7 @@
       <div class="columnaP">
         <div class="galeriaP">
           <a class="enlace" href="ofertas6.html">
-            <img src="src/img/ofertas/coronas_pro.png" alt="Oferta 6" />
+            <img src="img/ofertas/coronas_pro.png" alt="Oferta 6" />
             <div class="detalleP">
               <h2>Coronas de Zirconio</h2>
               <p> Antes $2,500</p>
@@ -93,7 +109,7 @@
       <div class="columnaP">
         <div class="galeriaP">
           <a class="enlace" href="ofertas7.html">
-            <img src="src/img/ofertas/exoinfantil_pro.png" alt="Oferta 7" />
+            <img src="img/ofertas/exoinfantil_pro.png" alt="Oferta 7" />
             <div class="detalleP">
               <h2>Exodoncia Infantil</h2>
               <p> Antes $800</p>
@@ -107,7 +123,7 @@
       <div class="columnaP">
         <div class="galeriaP">
           <a class="enlace" href="ofertas8.html">
-            <img src="src/img/ofertas/alineadores_pro.png" alt="Oferta 8" />
+            <img src="img/ofertas/alineadores_pro.png" alt="Oferta 8" />
             <div class="detalleP">
               <h2>Alineadores</h2>
               <p> Antes $12,500</p>
@@ -119,6 +135,7 @@
       </div>
     </div>
     <div class="clearfix"></div>
+    <!--Footer-->
     <footer class="footer">
       <table>
         <!--Tiene 3 etiquetas, tr (fila), th (encabezado columna), td (columna contenido)-->
@@ -129,10 +146,16 @@
         </tr>
         <tr>
           <td>
-            <i class="fas fa-map-marker-alt"></i> 
-            Av. 8 Esq. C. 29 C, Ignacio
-            Zaragoza, Venustiano Carranza, <br />
-            15000 Ciudad de México, CDMX <br />
+            <i class="fas fa-map-marker-alt"></i>
+            <a
+              href="https://maps.app.goo.gl/dtcW8Vk9sLSRdM9V6"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              Av. 8 Esq. C. 29 C, Ignacio Zaragoza, Venustiano Carranza, <br />
+              15000 Ciudad de México, CDMX
+            </a>
+            <br />
             <i class="fas fa-phone"></i> Teléfono: 55 3565 9327 <br />
           </td>
           <td>
@@ -142,13 +165,20 @@
           </td>
           <td>
             <ul>
-              <li>&#169; Isabel Mérida, 2025</li>
+              <li>&#169; EDT - Elite Development Team, 2025</li>
               <li>
-                <a class="whatsapp" href="https://wa.me/525619298976" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                <a
+                  class="whatsapp"
+                  href="https://wa.me/525619298974"
+                  target="_blank"
+                  ><i class="fa-brands fa-whatsapp"></i> WhatsApp</a
+                >
               </li>
               <li><i class="fas fa-envelope"></i> Email:</li>
               <li>
-                <a class="correo" href="mailto:Isa.Meryda@outlook.com">Isa.Meryda@outlook.com</a>
+                <a class="correo" href="mailto:contacto@edt.com"
+                  >contacto@edt.com</a
+                >
               </li>
             </ul>
           </td>

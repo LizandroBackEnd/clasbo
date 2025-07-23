@@ -50,10 +50,6 @@
   object-fit: contain; /* Mantiene proporciones */
 }
 
-img {
-  border-radius: 10px;
-}
-
 .filaP {
   max-width: 100%;
   margin: 2% 2%;
