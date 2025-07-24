@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - Clínica Dental Clasbo</title>
+    <link rel="stylesheet" href="css/contactanos.css" />
+    <script
+      src="https://kit.fontawesome.com/0edb134f6f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header_container">
+        <div class="header_logotext">
+          <img src="img/logo.png" alt="Clasbo+" />
+          <h1>Clínica Dental Clasbo</h1>
+        </div>
+        <nav>
+          <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
+          <a href="#"><i class="fas fa-tooth"></i> Servicios</a>
+          <a href="#"><i class="fas fa-stethoscope"></i> Especialistas</a>
+          <a href="ofertas.html"><i class="fas fa-tags"></i> Ofertas</a>
+          <a href="sobrenosotros.html"><i class="fas fa-users"></i> Sobre nosotros</a>
+          <a href="#"><i class="fas fa-calendar-alt"></i> Citas</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="formulario-contacto">
+      <h2><i class="fa-solid fa-envelope"></i> Contáctanos</h2>
+      <form action="#" method="post">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" required />
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" required />
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <!-- Puedes reutilizar el mismo footer que ya tienes -->
+    </footer>
+  </body>
+</html>
