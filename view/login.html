@@ -12,6 +12,18 @@
     <title>Clínica Dental Clasbo</title>
   </head>
   <body>
+    <a href="index.html">
+    <header class="header">
+  <div class="header_container">
+    <div class="header_logotext">
+      <img src="img/LOGO_TEXTOBL.png" alt="Clasbo+" />
+    </a>
+    </div>
+  </div>
+</header>
+
+        <div class="clearfix"></div>
+
     <div class="screen">
       <!-- <header>
         <a href="./index.html" class="logo">
@@ -24,29 +36,29 @@
         <p class="login-subtitle">Por favor inicia sesión</p>
 
         <!-- Contenedor para mensajes bonitos -->
-        <div id="form-feedback" class="form-feedback"></div>
+        <form id="login-form" action="perfilUsuario.html" method="get">
+  <div class="input-group">
+    <i class="fas fa-envelope"></i>
+    <input
+      type="email"
+      placeholder="Correo electrónico"
+      name="email"
+      required
+    />
+  </div>
+  <div class="input-group">
+    <i class="fas fa-lock"></i>
+    <input
+      type="password"
+      placeholder="Contraseña"
+      name="password"
+      required
+    />
+  </div>
 
-        <form id="login-form">
-          <div class="input-group">
-            <i class="fas fa-envelope"></i>
-            <input
-              type="email"
-              placeholder="Correo electrónico"
-              name="email"
-              required
-            />
-          </div>
-          <div class="input-group">
-            <i class="fas fa-lock"></i>
-            <input
-              type="password"
-              placeholder="Contraseña"
-              name="password"
-              required
-            />
-          </div>
-          <button type="submit" class="login-button">Iniciar sesión</button>
-        </form>
+  <button type="submit" class="login-button">Iniciar sesión</button>
+</form>
+
 
         <div class="register-link">
           <p>¿No tienes una cuenta? <a href="./register.html">Regístrate</a></p>
@@ -54,5 +66,50 @@
       </div>
     </div>
     <script src="./js/login.js"></script>
+
+  <footer class="footer">
+  <table>
+    <tr>
+      <th>Clínica Dental Clasbo</th>
+      <th>Redes Sociales</th>
+      <th>Copyright</th>
+    </tr>
+    <tr>
+      <td>
+        <i class="fas fa-map-marker-alt"></i>
+        <a
+          href="https://maps.app.goo.gl/dtcW8Vk9sLSRdM9V6"
+          target="_blank"
+          style="text-decoration: none; color: inherit"
+        >
+          Av. 8 Esq. C. 29 C, Ignacio Zaragoza, Venustiano Carranza, <br />
+          15000 Ciudad de México, CDMX
+        </a>
+        <br />
+        <i class="fas fa-phone"></i> Teléfono: 55 3565 9327
+      </td>
+      <td>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+      </td>
+      <td>
+        <ul>
+          <li>&#169; EDT - Elite Development Team, 2025</li>
+          <li>
+            <a class="whatsapp" href="https://wa.me/525619298974" target="_blank"
+              ><i class="fa-brands fa-whatsapp"></i> WhatsApp</a
+            >
+          </li>
+          <li><i class="fas fa-envelope"></i> Email:</li>
+          <li>
+            <a class="correo" href="mailto:contacto@edt.com">contacto@edt.com</a>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</footer>
   </body>
 </html>
+

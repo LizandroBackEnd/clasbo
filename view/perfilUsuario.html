@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil de Usuario - Clínica Dental Clasbo</title>
+    <link rel="stylesheet" href="css/perfilUsuario.css" />
+    <script
+      src="https://kit.fontawesome.com/84d2ef09b5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- Encabezado unificado con menú hamburguesa -->
+    <header class="header">
+      <div class="header_container">
+        <div class="header_logotext">
+          <img src="img/logo.png" alt="Clasbo+" />
+          <h1>Clínica Dental Clasbo</h1>
+        </div>
+
+        <div
+          class="menu-alterno"
+          id="menu-alterno"
+          aria-label="Abrir menú"
+          role="button"
+          tabindex="0"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav>
+          <a href="./index.html"><i class="fas fa-home"></i> Inicio</a>
+          <a href="#"><i class="fas fa-tooth"></i> Servicios</a>
+          <a href="#"><i class="fas fa-stethoscope"></i> Especialistas</a>
+          <a href="./ofertas.html"><i class="fas fa-tags"></i> Ofertas</a>
+          <a href="./sobrenosotros.html"><i class="fas fa-users"></i> Sobre nosotros</a>
+          <a href="#"><i class="fas fa-calendar-alt"></i> Citas</a>
+          <a id="Cerrarsesion" href="index.html"><i class="fas fa-right-to-bracket"></i> Cerrar Sesión</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="clearfix"></div>
+
+    <!-- Bienvenida y perfil -->
+    <div class="perfil-usuario">
+      <img src="img/perfilUsuario/perfil.jpg" alt="Foto del Usuario" class="foto-perfil" />
+      <h2 class="bienvenida">¡Bienvenido/a!</h2>
+    </div>
+
+    <!-- Información principal -->
+    <div class="contenedor">
+      <div class="seccion">
+        <h2>📅 Próximas citas</h2>
+        <div class="item"><p><span class="fecha">18 de julio, 10:00 AM:</span> Limpieza dental</p></div>
+        <div class="item"><p><span class="fecha">2 de agosto, 12:30 PM:</span> Revisión general</p></div>
+      </div>
+
+      <div class="seccion">
+        <h2>📖 Historial de citas</h2>
+        <div class="item"><p><span class="fecha">5 de junio:</span> Extracción de muela</p></div>
+        <div class="item"><p><span class="fecha">20 de mayo:</span> Limpieza dental</p></div>
+      </div>
+
+      <div class="seccion">
+        <h2>🦷 Tratamientos realizados</h2>
+        <div class="item"><p>Ortodoncia (iniciada en marzo 2024)</p></div>
+        <div class="item"><p>Empaste dental (molar inferior derecho)</p></div>
+        <div class="item"><p>Extracción de muela del juicio</p></div>
+      </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <!-- Pie de página unificado -->
+    <footer class="footer">
+      <table>
+        <tr>
+          <th>Clínica Dental Clasbo</th>
+          <th>Redes Sociales</th>
+          <th>Copyright</th>
+        </tr>
+        <tr>
+          <td>
+            <i class="fas fa-map-marker-alt"></i>
+            <a
+              href="https://maps.app.goo.gl/dtcW8Vk9sLSRdM9V6"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              Av. 8 Esq. C. 29 C, Ignacio Zaragoza, Venustiano Carranza, <br />
+              15000 Ciudad de México, CDMX
+            </a>
+            <br />
+            <i class="fas fa-phone"></i> Teléfono: 55 3565 9327
+          </td>
+          <td>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+          </td>
+          <td>
+            <ul>
+              <li>&#169; EDT - Elite Development Team, 2025</li>
+              <li>
+                <a class="whatsapp" href="https://wa.me/525619298974" target="_blank"
+                  ><i class="fa-brands fa-whatsapp"></i> WhatsApp</a
+                >
+              </li>
+              <li><i class="fas fa-envelope"></i> Email:</li>
+              <li>
+                <a class="correo" href="mailto:contacto@edt.com">contacto@edt.com</a>
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </footer>
+
+    <!-- Script para activar menú hamburguesa -->
+    <script>
+      const menuToggle = document.getElementById("menu-alterno");
+      const nav = document.querySelector(".header nav");
+      menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
