@@ -65,6 +65,31 @@ header {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
 
+.header_sesion {
+  width: 100%;
+  overflow: hidden;
+  background-color: #b2e4f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  gap: 8px; /* Espacio entre la imagen y el texto */
+}
+
+.header_sesion img {
+  width: 100px;
+  height: auto;
+}
+
+.header_sesion h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  color: #0078a0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
 .logo {
   display: flex;
   align-items: center;

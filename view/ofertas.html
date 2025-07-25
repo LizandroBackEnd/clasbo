@@ -11,6 +11,7 @@
       crossorigin="anonymous"></script>
   </head>
   <body>
+
     <header class="header">
       <div class="header_container">
         <div class="header_logotext">
@@ -44,7 +45,9 @@
     <!--Contenido-->
     <!--Banner-->
     <div class="banner">
-      <img src="img/ofertas/banner2.svg" alt="Banner de la clínica" />
+      <a href="./contactanos.html">
+        <img src="img/ofertas/banner2.svg" alt="Banner de la clínica" />
+      </a>
     </div>
     <div class="contenido">
       <h2 id="servicios-dentales">"Cuidamos tu sonrisa como si fuera la nuestra"</h2>
@@ -54,22 +57,22 @@
     <!--Galeria de Ofertas-->
         <div class="cont_ofertas">
             <div class="ofertas">
-              <a class="enlace" href="ofertas1.html">
+              <a class="enlace" href="./ofertas/ofertas1.html">
                 <img src="img/ofertas/blanqueamiento.png" alt="Oferta 1">
               </a>
             </div>
             <div class="ofertas">
-              <a class="enlace" href="ofertas2.html">
+              <a class="enlace" href="./ofertas/ofertas2.html">
                 <img src="img/ofertas/limpieza.png" alt="Oferta 2">
               </a>
             </div>
             <div class="ofertas">
-              <a class="enlace" href="ofertas3.html">
+              <a class="enlace" href="./ofertas/ofertas3.html">
                 <img src="img/ofertas/ortodoncia.png" alt="Oferta 3">
               </a>
             </div>
             <div class="ofertas">
-              <a class="enlace" href="ofertas4.html">
+              <a class="enlace" href="./ofertas/ofertas4.html">
                 <img src="img/ofertas/implante_ofer.png" alt="Oferta 4">
               </a>
             </div>
@@ -80,7 +83,7 @@
       <!--Primera Columna-->
       <div class="columnaP">
         <div class="galeriaP">
-          <a class="enlace" href="ofertas5.html">
+          <a class="enlace" href="./ofertas/ofertas5.html">
             <img src="img/ofertas/resinas_pro.png" alt="Oferta 5" />
             <div class="detalleP">
               <h2>Resinas</h2>
@@ -94,7 +97,7 @@
       <!--Segunda Columna-->
       <div class="columnaP">
         <div class="galeriaP">
-          <a class="enlace" href="ofertas6.html">
+          <a class="enlace" href="./ofertas/ofertas6.html">
             <img src="img/ofertas/coronas_pro.png" alt="Oferta 6" />
             <div class="detalleP">
               <h2>Coronas de Zirconio</h2>
@@ -108,7 +111,7 @@
       <!--Tercera Columna-->
       <div class="columnaP">
         <div class="galeriaP">
-          <a class="enlace" href="ofertas7.html">
+          <a class="enlace" href="./ofertas/ofertas7.html">
             <img src="img/ofertas/exoinfantil_pro.png" alt="Oferta 7" />
             <div class="detalleP">
               <h2>Exodoncia Infantil</h2>
@@ -122,7 +125,7 @@
       <!--Cuarta Columna-->
       <div class="columnaP">
         <div class="galeriaP">
-          <a class="enlace" href="ofertas8.html">
+          <a class="enlace" href="./ofertas/ofertas8.html">
             <img src="img/ofertas/alineadores_pro.png" alt="Oferta 8" />
             <div class="detalleP">
               <h2>Alineadores</h2>
@@ -185,5 +188,14 @@
         </tr>
       </table>
     </footer>
+    <script>
+      // Script para el menú alternativo
+      const menuToggle = document.getElementById("menu-alterno");
+      const nav = document.querySelector('.header nav');
+
+      menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>

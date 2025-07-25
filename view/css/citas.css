@@ -1,0 +1,238 @@
+/*Formulario citas*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#calendario {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.fc .fc-button-primary:disabled {
+    background-color: #A3B1B7;
+    color: #ffffff;
+}
+
+.fc .fc-button:disabled {
+    opacity: 0.90;
+}
+
+.fc .fc-button-primary {
+  background-color: #0078a0;
+  color: white;              
+}
+
+.fc .fc-button-primary.fc-button-active {
+  background-color: #00113d;
+  color: white;
+}
+
+.fc {
+  font-family: "Roboto", sans-serif;
+}
+
+.fc .fc-button {
+  background-color: #0078a0; 
+  color: white;              
+  border: none;
+  border-radius: 5px;
+}
+
+.fc .fc-button:hover {
+  background-color: #00113d;
+  color: #fff;
+}
+
+.fc .fc-button-icon {
+  fill: white; /* color de las flechas */
+}
+
+.fc-day-today {
+  background-color: #CFF6E5 !important;
+  color: #000000 !important;
+  border-radius: 5px;
+}
+
+.fc-highlight {
+  background-color: #B2E4F2 !important;
+  opacity: 0.5 !important;
+  border-radius: 4px !important;
+}
+
+.div_citas {
+  width: 50%;
+  overflow: hidden;
+  margin: 50px auto;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.div_citas h2 {
+  text-align: center;
+  font-family: "roboto", sans-serif;
+  font-size: 2vw;
+  color: #0078a0;
+  letter-spacing: 0.5px;
+}
+
+.div_citas h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1vw;
+}
+
+.div_citas p {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1vw;
+}
+
+.div_citas ul {
+  font-family: "Roboto", sans-serif;
+  font-size: 1vw;
+  list-style-type: none;
+  padding: 0;
+}
+
+.div_citas select {
+  width: 50%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: "Roboto", sans-serif;
+  font-size: 1vw;
+}
+
+.div_citas form {
+  width: 100%;
+  margin: auto; /* Centra el formulario */
+}
+
+.form_citas label {
+  font-family: "Roboto", sans-serif;
+  font-size: 1vw;
+}
+
+.div_citas input {
+  width: 100%;
+  margin: 1% 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#boton_cita {
+  background-color: #0078a0;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 50%;
+  display: block;
+  margin: 20px auto 0 auto;
+}
+
+#boton_cita:hover {
+  background-color: #00113d;
+}
+
+/* Formulario Responsivo */
+
+@media (max-width: 1024px) {
+  .div_citas {
+    width: 70%;
+    padding: 15px;
+  }
+
+  .div_citas h2 {
+    font-size: 1.8rem; /* ajustar tamaño a algo más pequeño */
+  }
+  
+  .div_citas h3,
+  .div_citas p,
+  .div_citas ul,
+  .div_citas select,
+  .form_citas label {
+    font-size: 0.9rem;
+  }
+
+  #boton_cita {
+    width: 60%;
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .div_citas {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .div_citas h2 {
+    font-size: 1.6rem;
+  }
+  
+  .div_citas h3,
+  .div_citas p,
+  .div_citas ul,
+  .div_citas select,
+  .form_citas label {
+    font-size: 0.85rem;
+  }
+
+  #boton_cita {
+    width: 70%;
+    font-size: 1.1rem;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .div_citas {
+    width: 95%;
+    padding: 8px;
+  }
+
+  .div_citas h2 {
+    font-size: 1.4rem;
+  }
+  
+  .div_citas h3,
+  .div_citas p,
+  .div_citas ul,
+  .div_citas select,
+  .form_citas label {
+    font-size: 0.8rem;
+  }
+
+  #boton_cita {
+    width: 80%;
+    font-size: 1.2rem;
+    padding: 16px;
+  }
+}
+
+.div_citas p {
+  margin-bottom: 1.2em;
+  line-height: 1.4em;
+}
+
+#boton_cita {
+  margin: 30px auto 0 auto;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}

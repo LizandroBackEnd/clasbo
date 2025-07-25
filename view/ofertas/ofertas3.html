@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ofertas - Clínica Dental Clasbo</title>
+    <link rel="stylesheet" href="../css/ofertas.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <script
+      src="https://kit.fontawesome.com/0edb134f6f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header_container">
+        <div class="header_logotext">
+        <img src="../img/logo.png" alt="Clasbo+" />
+        <h1>Clínica Dental Clasbo</h1>
+      </div>
+
+      <div
+        class="menu-alterno"
+        id="menu-alterno"
+        aria-label="Abrir menú"
+        role="button"
+        tabindex="0"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav>
+        <a href="../index.html"> <i class="fas fa-home"></i> Inicio </a>
+        <a href="#"> <i class="fas fa-tooth"></i> Servicios </a>
+        <a href="#"><i class="fas fa-stethoscope"></i> Especialistas</a>
+        <a href="../ofertas.html"><i class="fas fa-tags"></i> Ofertas</a>
+        <a href="../sobrenosotros.html"> <i class="fas fa-users"></i> Sobre nosotros </a>
+        <a href="../citas.html"> <i class="fas fa-calendar-alt"></i> Citas </a>
+        <a id="iniciar" href="../login.html"><i class="fas fa-user"></i> Iniciar Sesión </a>
+      </nav>
+      </div>
+    </header>
+    <div class="clearfix"></div>
+
+    <!-- Aquí empieza el contenido -->
+    <div class="FilaD">
+      <!-- Primera columna img -->
+      <div class="columnaD">
+        <div class="galeriaD">
+          <a class="enlace" href="#">
+            <img src="../img/ofertas/consulta.png" alt="ofertas1" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Segunda columna texto -->
+      <div class="descD">
+        <p id="nombreD">Consulta Dental</p>
+        <br />
+        <p>
+          La consulta dental es un procedimiento esencial para evaluar la salud bucal del paciente.
+          Durante la consulta, se realiza un examen exhaustivo de los dientes, encías y tejidos
+          circundantes. Utilizamos tecnología de punta para garantizar resultados efectivos y duraderos.
+          Este tratamiento ayuda a mejorar la apariencia de tu sonrisa y aumenta
+          tu confianza.
+        </p>
+        <br />
+        <p>¡Ven y cuida tu sonrisa con nosotros!</p>
+        <br />
+        <p id="precioD">$1,200</p>
+        <p id="precio_ofertas"> Ahora $960</p><br />
+        <p id="detalles_ofertas">¡Por tiempo limitado!</p><br />
+        <ul>
+            <li>Examen dental completo</li>
+            <li>Radiografías digitales</li>
+            <li>Plan de tratamiento personalizado</li>
+            <li>Asesoramiento sobre higiene bucal</li>
+            <li>Descuentos en tratamientos adicionales</li>
+            <li>Atención especializada por parte de nuestros dentistas</li>
+            <li>Ambiente cómodo y amigable</li>
+            <li>Horarios flexibles para adaptarnos a tu agenda</li>
+            <li>Seguimiento post-tratamiento para asegurar tu bienestar</li>
+            <li>Garantía de satisfacción en todos nuestros servicios</li>
+        </ul>
+        <br />
+        <div class="botoncita">
+          <a href="../citas.html" id="botonD">
+            <i class="fas fa-calendar-alt"></i> Agendar Cita
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer class="footer">
+      <table>
+        <!--Tiene 3 etiquetas, tr (fila), th (encabezado columna), td (columna contenido)-->
+        <tr>
+          <th>Clínica Dental Clasbo</th>
+          <th>Redes Sociales</th>
+          <th>Copyright</th>
+        </tr>
+        <tr>
+          <td>
+            <i class="fas fa-map-marker-alt"></i>
+            <a
+              href="https://maps.app.goo.gl/dtcW8Vk9sLSRdM9V6"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              Av. 8 Esq. C. 29 C, Ignacio Zaragoza, Venustiano Carranza, <br />
+              15000 Ciudad de México, CDMX
+            </a>
+            <br />
+            <i class="fas fa-phone"></i> Teléfono: 55 3565 9327 <br />
+          </td>
+          <td>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+          </td>
+          <td>
+            <ul>
+              <li>&#169; EDT - Elite Development Team, 2025</li>
+              <li>
+                <a
+                  class="whatsapp"
+                  href="https://wa.me/525619298974"
+                  target="_blank"
+                  ><i class="fa-brands fa-whatsapp"></i> WhatsApp</a
+                >
+              </li>
+              <li><i class="fas fa-envelope"></i> Email:</li>
+              <li>
+                <a class="correo" href="mailto:contacto@edt.com"
+                  >contacto@edt.com</a
+                >
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </footer>
+    <script>
+      // Script para el menú alternativo
+      const menuToggle = document.getElementById("menu-alterno");
+      const nav = document.querySelector('.header nav');
+
+      menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

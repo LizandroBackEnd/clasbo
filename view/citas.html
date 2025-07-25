@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clínica Dental Clasbo</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/citas.css" />
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/locales/es.global.min.js"></script>
+
+    <script src="calendario.js"></script>
+    <script
+      src="https://kit.fontawesome.com/0edb134f6f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header_container">
+        <div class="header_logotext">
+          <img src="img/logo.png" alt="Clasbo+" />
+          <h1>Clínica Dental Clasbo</h1>
+        </div>
+
+        <div
+          class="menu-alterno"
+          id="menu-alterno"
+          aria-label="Abrir menú"
+          role="button"
+          tabindex="0"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav>
+          <a href="./index.html"> <i class="fas fa-home"></i> Inicio </a>
+          <a href="#"> <i class="fas fa-tooth"></i> Servicios </a>
+          <a href="#"><i class="fas fa-stethoscope"></i> Especialistas</a>
+          <a href="./ofertas.html"><i class="fas fa-tags"></i> Ofertas</a>
+          <a href="./sobrenosotros.html">
+            <i class="fas fa-users"></i> Sobre nosotros
+          </a>
+          <a href="#"> <i class="fas fa-calendar-alt"></i> Citas </a>
+          <a id="iniciar" href="./login.html"
+            ><i class="fas fa-user"></i> Iniciar Sesión
+          </a>
+        </nav>
+      </div>
+    </header>
+    <!--Contenido-->
+    <div class="div_citas">
+      <h2>Agenda tu cita fácilmente</h2>
+      <p>
+        Selecciona la fecha desde el calendario. Luego llena el formulario con
+        tu información.
+      </p>
+      <br />
+
+      <div id="calendario"></div>
+
+      <div id="formulario-cita"><br>
+        <h3>Fecha seleccionada: <span id="fechaSeleccionada"></span></h3>
+        <form class="form_citas" onsubmit="return agendarCita();">
+          <input type="hidden" id="fecha" name="fecha" /><br>
+
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required />
+
+          <label for="apellido">Apellido Paterno</label>
+          <input type="text" id="apellido_p" name="apellido" required />
+
+          <label for="apellido_m">Apellido Materno</label>
+          <input type="text" id="apellido_m" name="apellido_m" required />
+
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" required />
+
+          <label for="servicio">Servicio</label>
+          <select id="servicio" name="servicio" required>
+            <option value="">Selecciona un servicio</option>
+            <option value="alineadores">Alineadores y retenedor</option>
+            <option value="cirugia_bucal">Cirugía bucal</option>
+            <option value="cirugia_maxilofacial">Cirugía maxilofacial</option>
+            <option value="diagnostico">Diagnóstico</option>
+            <option value="diseno_sonrisa">Diseño de sonrisa</option>
+            <option value="endodoncia">Endodoncia</option>
+            <option value="implantes">Implantes</option>
+            <option value="oclusion_protesica">Oclusión protésica</option>
+            <option value="operatoria_dental">Operatoria dental</option>
+            <option value="odontopediatria">Odontopediatría</option>
+            <option value="ortopedia_dental">Ortopedia Dental</option>
+            <option value="patologia">Patología</option>
+            <option value="periodoncia">Periodoncia</option>
+            <option value="profilaxis">Profilaxis Dental</option>
+            <option value="protesis_bucal">Prótesis bucal</option>
+            <option value="ortodoncia">Tratamiento de ortodoncia</option>
+            <option value="preimplantes">
+              Tratamiento previo para implantes
+            </option>
+            <option value="trauma">Trauma facial y dental</option>
+          </select><br>
+
+          <label for="hora">Hora</label>
+          <select id="hora" name="hora" required>
+            <option value="">Selecciona una hora</option>
+          </select>
+
+          <input
+            type="submit"
+            value="Agendar cita"
+            id="boton_cita"
+          />
+        </form>
+      </div>
+
+      <br />
+      <p>
+        Recibirás un recordatorio por correo un día antes. Si necesitas cambiar
+        o cancelar tu cita, contáctanos al (55) 3565 9327.
+      </p>
+
+      <h3>Recomendaciones antes de tu cita</h3>
+      <ul>
+        <li>- Llega 10 minutos antes</li>
+        <li>- En caso de fiebre o malestar, reprograma tu cita</li>
+      </ul>
+    </div>
+    <footer class="footer">
+      <table>
+        <!--Tiene 3 etiquetas, tr (fila), th (encabezado columna), td (columna contenido)-->
+        <tr>
+          <th>Clínica Dental Clasbo</th>
+          <th>Redes Sociales</th>
+          <th>Copyright</th>
+        </tr>
+        <tr>
+          <td>
+            <i class="fas fa-map-marker-alt"></i>
+            <a
+              href="https://maps.app.goo.gl/dtcW8Vk9sLSRdM9V6"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              Av. 8 Esq. C. 29 C, Ignacio Zaragoza, Venustiano Carranza, <br />
+              15000 Ciudad de México, CDMX
+            </a>
+            <br />
+            <i class="fas fa-phone"></i> Teléfono: 55 3565 9327 <br />
+          </td>
+          <td>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+          </td>
+          <td>
+            <ul>
+              <li>&#169; EDT - Elite Development Team, 2025</li>
+              <li>
+                <a
+                  class="whatsapp"
+                  href="https://wa.me/525619298974"
+                  target="_blank"
+                  ><i class="fa-brands fa-whatsapp"></i> WhatsApp</a
+                >
+              </li>
+              <li><i class="fas fa-envelope"></i> Email:</li>
+              <li>
+                <a class="correo" href="mailto:contacto@edt.com"
+                  >contacto@edt.com</a
+                >
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </footer>
+    <script>
+      // Script para el menú alternativo
+      const menuToggle = document.getElementById("menu-alterno");
+      const nav = document.querySelector(".header nav");
+
+      menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
+    <!-- solo simula el envío del formulario -->
+    <script>
+  function agendarCita() {
+    alert('¡Gracias! Cita agendada');
+    window.location.href = './index.html';
+    return false; // Evita que se recargue la página
+  }
+</script>
+  </body>
+</html>
