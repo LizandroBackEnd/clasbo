@@ -16,17 +16,17 @@
 }
 
 .fc .fc-button-primary:disabled {
-    background-color: #A3B1B7;
-    color: #ffffff;
+  background-color: #a3b1b7;
+  color: #ffffff;
 }
 
 .fc .fc-button:disabled {
-    opacity: 0.90;
+  opacity: 0.9;
 }
 
 .fc .fc-button-primary {
   background-color: #0078a0;
-  color: white;              
+  color: white;
 }
 
 .fc .fc-button-primary.fc-button-active {
@@ -39,8 +39,8 @@
 }
 
 .fc .fc-button {
-  background-color: #0078a0; 
-  color: white;              
+  background-color: #0078a0;
+  color: white;
   border: none;
   border-radius: 5px;
 }
@@ -55,13 +55,13 @@
 }
 
 .fc-day-today {
-  background-color: #CFF6E5 !important;
+  background-color: #cff6e5 !important;
   color: #000000 !important;
   border-radius: 5px;
 }
 
 .fc-highlight {
-  background-color: #B2E4F2 !important;
+  background-color: #b2e4f2 !important;
   opacity: 0.5 !important;
   border-radius: 4px !important;
 }
@@ -149,31 +149,6 @@
 
 /* Formulario Responsivo */
 
-@media (max-width: 1024px) {
-  .div_citas {
-    width: 70%;
-    padding: 15px;
-  }
-
-  .div_citas h2 {
-    font-size: 1.8rem; /* ajustar tamaño a algo más pequeño */
-  }
-  
-  .div_citas h3,
-  .div_citas p,
-  .div_citas ul,
-  .div_citas select,
-  .form_citas label {
-    font-size: 0.9rem;
-  }
-
-  #boton_cita {
-    width: 60%;
-    font-size: 1rem;
-    padding: 12px;
-  }
-}
-
 @media (max-width: 768px) {
   .div_citas {
     width: 90%;
@@ -183,7 +158,7 @@
   .div_citas h2 {
     font-size: 1.6rem;
   }
-  
+
   .div_citas h3,
   .div_citas p,
   .div_citas ul,
@@ -199,7 +174,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .div_citas {
     width: 95%;
     padding: 8px;
@@ -208,7 +183,7 @@
   .div_citas h2 {
     font-size: 1.4rem;
   }
-  
+
   .div_citas h3,
   .div_citas p,
   .div_citas ul,
@@ -235,4 +210,12 @@
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s ease;
+
+  .fc .fc-button {
+    padding: 8px 12px; 
+    margin: 4px 4px 4px 0; 
+    font-size: 0.9rem; 
+    min-width: 60px; 
+    display: inline-block;
+  }
 }
