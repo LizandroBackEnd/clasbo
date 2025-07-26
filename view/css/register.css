@@ -66,8 +66,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4rem 2rem; /* Aumenté el padding vertical de 2rem a 4rem */
-  flex: 1; /* Ocupa el espacio disponible entre header y footer */
+  padding: 4rem 2rem; 
+  flex: 1; 
 }
 
 .register-container {
@@ -77,7 +77,7 @@ body {
   width: 100%;
   max-width: 450px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  margin: 2rem 0; /* Agregué margen vertical para más separación */
+  margin: 2rem 0; 
 }
 
 .register-container h2 {
@@ -263,11 +263,11 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
   .screen {
-    padding: 3rem 1rem; /* Ajusté el padding para móviles */
+    padding: 3rem 1rem; 
   }
 
   .register-container {
-    margin: 1rem 0; /* Menos margen en móviles para aprovechar el espacio */
+    margin: 1rem 0; 
   }
 
   .header {
@@ -301,12 +301,12 @@ body {
 
 @media (max-width: 500px) {
   .screen {
-    padding: 2rem 1rem; /* Padding más conservador para pantallas muy pequeñas */
+    padding: 2rem 1rem; 
   }
 
   .register-container {
-    margin: 0.5rem 0; /* Margen mínimo para pantallas muy pequeñas */
-    padding: 20px; /* Menos padding interno para aprovechar el espacio */
+    margin: 0.5rem 0; 
+    padding: 20px; 
   }
 
   .header {

@@ -45,11 +45,11 @@ body {
 .screen {
   height: 100vh;
   display: flex;
-  justify-content: center;    /* Centra verticalmente */
-  align-items: center;        /* Centra horizontalmente */
+  justify-content: center;    
+  align-items: center;        
   flex-direction: column;
   padding: 0 20px;
-  background-color: #f2f2f2;  /* Por si no se está heredando */
+  background-color: #f2f2f2;  
 }
 
 
@@ -73,7 +73,7 @@ header {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  gap: 8px; /* Espacio entre la imagen y el texto */
+  gap: 8px; 
 }
 
 .header_sesion img {
@@ -361,7 +361,7 @@ header {
   }
 }
 
-/* Estilos para el feedback de mensajes */
+
 .form-feedback {
   padding: 12px;
   margin: 10px 0;
