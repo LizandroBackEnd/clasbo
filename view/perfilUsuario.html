@@ -16,31 +16,31 @@
     <header class="header">
       <div class="header_container">
         <div class="header_logotext">
-          <img src="img/logo.png" alt="Clasbo+" />
-          <h1>Clínica Dental Clasbo</h1>
-        </div>
+        <img src="img/logo.png" alt="Clasbo+" />
+        <h1>Clínica Dental Clasbo</h1>
+      </div>
 
-        <div
-          class="menu-alterno"
-          id="menu-alterno"
-          aria-label="Abrir menú"
-          role="button"
-          tabindex="0"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+      <div
+        class="menu-alterno"
+        id="menu-alterno"
+        aria-label="Abrir menú"
+        role="button"
+        tabindex="0"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
-        <nav>
-          <a href="./index.html"><i class="fas fa-home"></i> Inicio</a>
-          <a href="./servicios.html"><i class="fas fa-tooth"></i> Servicios</a>
-          <a href="./Especialista.html"><i class="fas fa-stethoscope"></i> Especialistas</a>
-          <a href="./ofertas.html"><i class="fas fa-tags"></i> Ofertas</a>
-          <a href="./sobrenosotros.html"><i class="fas fa-users"></i> Sobre nosotros</a>
-          <a href="#"><i class="fas fa-calendar-alt"></i> Citas</a>
-          <a id="Cerrarsesion" href="index.html"><i class="fas fa-right-to-bracket"></i> Cerrar Sesión</a>
-        </nav>
+      <nav>
+        <a href="./index.html"> <i class="fas fa-home"></i> Inicio </a>
+        <a href="./servicios.html"> <i class="fas fa-tooth"></i> Servicios </a>
+        <a href="./Especialista.html"><i class="fas fa-stethoscope"></i> Especialistas</a>
+        <a href="./ofertas.html"><i class="fas fa-tags"></i> Ofertas</a>
+        <a href="./sobrenosotros.html"> <i class="fas fa-users"></i> Sobre nosotros </a>
+        <a href="./citas.html"> <i class="fas fa-calendar-alt"></i> Citas </a>
+        <a id="iniciar" href="./login.html"><i class="fas fa-user"></i> Iniciar Sesión </a>
+      </nav>
       </div>
     </header>
 
@@ -56,8 +56,8 @@
     <div class="contenedor">
       <div class="seccion">
         <h2>📅 Próximas citas</h2>
-        <div class="item"><p><span class="fecha">18 de julio, 10:00 AM:</span> Limpieza dental</p></div>
-        <div class="item"><p><span class="fecha">2 de agosto, 12:30 PM:</span> Revisión general</p></div>
+        <div class="item"><p><span class="fecha">18 de septiembre, 10:00 AM:</span> Limpieza dental</p></div>
+        <div class="item"><p><span class="fecha">2 de octubre, 12:30 PM:</span> Revisión general</p></div>
       </div>
 
       <div class="seccion">
@@ -79,6 +79,7 @@
     <!-- Pie de página unificado -->
     <footer class="footer">
       <table>
+        <!--Tiene 3 etiquetas, tr (fila), th (encabezado columna), td (columna contenido)-->
         <tr>
           <th>Clínica Dental Clasbo</th>
           <th>Redes Sociales</th>
@@ -96,7 +97,7 @@
               15000 Ciudad de México, CDMX
             </a>
             <br />
-            <i class="fas fa-phone"></i> Teléfono: 55 3565 9327
+            <i class="fas fa-phone"></i> Teléfono: 55 3565 9327 <br />
           </td>
           <td>
             <i class="fa-brands fa-facebook"></i>
@@ -107,29 +108,53 @@
             <ul>
               <li>&#169; EDT - Elite Development Team, 2025</li>
               <li>
-                <a class="whatsapp" href="https://wa.me/525619298974" target="_blank"
+                <a
+                  class="whatsapp"
+                  href="https://wa.me/525619298974"
+                  target="_blank"
                   ><i class="fa-brands fa-whatsapp"></i> WhatsApp</a
                 >
               </li>
               <li><i class="fas fa-envelope"></i> Email:</li>
               <li>
-                <a class="correo" href="mailto:contacto@edt.com">contacto@edt.com</a>
+                <a class="correo" href="mailto:contacto@edt.com"
+                  >contacto@edt.com</a
+                >
               </li>
             </ul>
           </td>
         </tr>
       </table>
     </footer>
-
-    <!-- Script para activar menú hamburguesa -->
     <script>
+      // Script para el menú alternativo con animación suave
       const menuToggle = document.getElementById("menu-alterno");
-      const nav = document.querySelector(".header nav");
+      const nav = document.querySelector('.header nav');
+
       menuToggle.addEventListener("click", () => {
         nav.classList.toggle("active");
+        
+        // Agregar transición con delay para cada enlace
+        if (nav.classList.contains("active")) {
+          const links = nav.querySelectorAll('a');
+          links.forEach((link, index) => {
+            link.style.transitionDelay = `${index * 0.1}s`;
+          });
+        } else {
+          const links = nav.querySelectorAll('a');
+          links.forEach((link) => {
+            link.style.transitionDelay = '0s';
+          });
+        }
+      });
+
+      // Cerrar menú al hacer clic en un enlace (opcional)
+      const navLinks = document.querySelectorAll('.header nav a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('active');
+        });
       });
     </script>
-
-  </body> 
-  <script src="./auth/js/profile.js"></script>
+  </body>
 </html>
