@@ -48,7 +48,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #0078a0;
+  background-color: #00113D;
   position: relative; /* Para el menú hamburguesa */
   padding: 0 1rem;
   transition: background-color 0.3s ease;
@@ -68,7 +68,7 @@
 
 .header a:hover,
 .header a:focus {
-  background-color: #00113d;
+  background-color: #0078A0;
   color: #b2e4f2;
   outline: none;
 }
