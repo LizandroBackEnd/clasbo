@@ -96,3 +96,188 @@
         padding: 7px 16px;
     }
 }
+.filaD {
+    max-width: 80%;
+    margin: 3% 10%;
+    display: flex;
+    flex-wrap: wrap; /* Permite que las columnas se ajusten en varias filas si es necesario */
+    justify-content: center; /* Centra las columnas horizontalmente */
+    /*background-color:#b2e4f2;*/
+}
+.columnaD {
+    margin: 2%;
+    width: 46%;
+    display: flex;
+    float: left; /* Permite que las columnas floten a la izquierda */
+    padding: 1%;
+    font-family: 'roboto', sans-serif;
+    text-align: center;
+}
+.columnaD p{
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    color: #00113d;
+    padding: 10px;
+}
+
+.galeriaD {
+    max-width: 95%; /* Asegura que la galería ocupe todo el ancho disponible */
+    border: 2px;
+    border-radius: 10px;
+    padding: 5% 5%;
+}
+.galeriaD img{
+    width: 115%;
+    height: auto;
+    padding: 2%;
+    margin-top: 0px;
+    border-radius: 6%;
+}
+.descD {
+    max-width: 100%;
+    height: auto;
+    padding: 5%;
+    border-radius: 2px;
+    color: #0078a0;
+    font-family: 'roboto', sans-serif;
+    font-size: 2%;
+    text-align: justify; /* Justifica el texto para una mejor presentación */
+}
+.descD p {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: justify;
+    color: #00113d;
+    padding: 5px;
+}
+#precioD {
+    font-family: 'roboto', sans-serif ;
+    font-size: 1.9vw;
+    font-weight: 400;
+    text-align: center;
+    color: #000000;
+    padding: 5px;
+}
+
+#btn-agendar {
+    background-color: #0078a0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.lista-servicios {
+  display: grid;
+  grid-template-columns: 1fr 100px;
+  gap: 8px;
+  max-width: 400px;
+  margin: 40px auto;
+  font-family: sans-serif;
+}
+
+.categoria-servicios {
+  grid-column: 1 / span 2;
+  font-weight: bold;
+  margin-top: 16px;
+  background-color: #f0f0f0;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.servicio-servicios {
+  grid-column: 1;
+  padding-left: 10px;
+}
+
+.precio-servicios {
+  grid-column: 2;
+  text-align: right;
+  padding-right: 10px;
+}
+@media only screen and (max-width: 970px) {
+    .filaE {
+        flex-wrap: wrap;
+        /* Permite que las columnas se envuelvan */
+        align-items: center;
+        /* Centra las columnas en la fila */
+    }
+
+    .columnaE {
+        width: 46%;
+        margin: 2%;
+    }
+    .columnaD {
+        width: 100%;
+        margin: 1% 0;
+        padding: 1%;
+    }
+    .galeriaD{
+        width: 75%;
+        height: auto;
+        padding: 0%;
+        border-radius: 6%;
+    }
+    .galeriaD img {
+        width: 65%;
+        height: auto;
+        padding: 2%;
+        border-radius: 6%;
+    }
+    .descD{
+        padding: 1% 5%;
+    }
+    .descD p{
+        font-size: 16px;
+        padding: 0px;
+    }
+    #btn-agendar {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+    #precioD {
+        font-size: 19px;
+        padding: 3px;
+    }
+}
+@media only screen and (max-width: 568px) {
+    .fila {
+        flex-direction: column;
+    }
+    .columnaD {
+        width: 100%;
+        margin: 1% 0;
+        padding: 1%;
+    }
+    .galeriaD{
+        width: 100%;
+        height: auto;
+        padding: 0%;
+        border-radius: 6%;
+    }
+    .galeriaD img {
+        width: 65%;
+        height: auto;
+        padding: 2%;
+        border-radius: 6%;
+    }
+    .descD{
+        padding: 1% 5%;
+    }
+    .descD p{
+        font-size: 12px;
+        padding: 0px;
+    }
+    #btn-agendar {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    #precioD {
+        font-size: 14px;
+        padding: 3px;
+    }
+}
