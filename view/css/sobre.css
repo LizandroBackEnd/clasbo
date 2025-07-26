@@ -183,6 +183,7 @@ body {
 .info-texto p {
   font-size: 18px;
   margin-bottom: 15px;
+  text-align: center
 }
 
 .info-imagen {
