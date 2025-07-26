@@ -19,62 +19,69 @@ body {
    Encabezado (Header)
 ========================= */
 .header {
-  width: 100%;
   position: relative;
-  z-index: 100;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .header_container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Apilados: logo arriba, nav abajo */
   align-items: center;
-  padding: 10px;
-  gap: 10px;
+  position: relative;
 }
 
 .header_logotext {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 10px;
-  text-align: center;
 }
 
 .header_logotext img {
   width: 10%;
+  height: auto;
+  object-fit: contain;
 }
 
 .header_logotext h1 {
   font-family: "Roboto", sans-serif;
   font-size: 50px;
+  color: #000000;
   font-weight: 700;
-  color: #000;
+  letter-spacing: 0.5px;
 }
 
-/* Navegación */
 .header nav {
   width: 100%;
+  max-width: 100%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  justify-content: space-around;
-  background-color: #0078a0;
+  background-color: #00113D;
+  position: relative; /* Para el menú hamburguesa */
   padding: 0 1rem;
+  transition: background-color 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.header nav a {
-  color: white;
-  text-decoration: none;
-  padding: 1rem 1.2rem;
+.header a {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
-  transition: background 0.3s ease, color 0.3s ease;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 1rem 1.2rem;
   border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.header nav a:hover {
-  background-color: #00113d;
+.header a:hover,
+.header a:focus {
+  background-color: #0078A0;
   color: #b2e4f2;
+  outline: none;
 }
 
 /* =========================
@@ -163,7 +170,7 @@ form button:hover {
 ========================= */
 .footer {
   width: 100%;
-  background-color: #0078a0;
+  background-color: #00113D;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
   padding: 15px 5%;
@@ -171,43 +178,53 @@ form button:hover {
 
 .footer table {
   width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
+  border-collapse: collapse; /* Une bordes */
+  table-layout: fixed; /* Fuerza columnas iguales */
 }
 
 .footer th,
 .footer td {
   width: 33.33%;
   padding: 15px;
-  text-align: center;
   vertical-align: top;
+  text-align: center;
+  word-break: break-word; /* Evita desbordes largos */
 }
 
+/* Encabezados */
 .footer th {
   font-size: 18px;
   font-weight: bold;
+  padding-bottom: 10px;
   border-bottom: 1px solid #ffffff50;
 }
 
+/* Íconos */
 .footer i {
   margin-right: 8px;
+  font-size: 16px;
 }
 
+/* Íconos sociales */
 .footer i.fa-brands {
   font-size: 20px;
   margin: 5px 8px 5px 0;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .footer i.fa-brands:hover {
   color: #b2e4f2;
 }
 
+/* Enlaces dentro del footer */
 .footer a {
   color: #ffffff;
   text-decoration: none;
+  font-weight: 500;
 }
 
+/* Lista en la tercera columna */
 .footer ul {
   list-style: none;
   padding: 0;
@@ -216,6 +233,16 @@ form button:hover {
 
 .footer ul li {
   margin-bottom: 5px;
+}
+
+.whatsapp {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.correo {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 /* =========================
