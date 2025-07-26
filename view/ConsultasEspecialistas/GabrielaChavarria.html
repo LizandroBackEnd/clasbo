@@ -5,42 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Especialistas</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/cont_Especialista.css">
-    <link rel="stylesheet" href="../css/cont_ConsultarServ.css">
     <script src="https://kit.fontawesome.com/b9e3abcb67.js" crossorigin="anonymous"></script>"
 </head>
 
 <body>
     <header class="header">
-        <img src="../imagenes/LOGO_TEXTO_Transparente.png" alt="Clasbo+">
+      <div class="header_container">
+        <div class="header_logotext">
+        <img src="img/logo.png" alt="Clasbo+" />
+        <h1>Clínica Dental Clasbo</h1>
+      </div>
 
-        <br><br>
-        <h1> Clinica Dental CLASBO </h1>
-        <div class="clearfix"></div>
-        <nav>
-            <a href="../index.html">
-                <i class="fas fa-solid fa-house"></i> Inicio
-            </a>
-            <a href="../ConsultaDeServicios.html">
-                <i class="fas fa-solid fa-tooth"></i>Servicios
-            </a>
-            <a href="../ConsultarEspecialista.html">
-                <i class="fas fa-solid fa-stethoscope"></i>
-                Especialistas
-            </a>
-            <a href="#">
-                <i class="fast fa-solid fa-users"></i> Sobre Nosotros
-            </a>
-            <a href="#">
-                <i class="fas fa-solid fa-calendar-alt"></i>
-                Citas
-            </a>
-            <a id="iniciar-sesion" href="../inisec.html">
-                <i class="fas fa-solid fa-user-md"></i> Iniciar Sesión
-            </a>
-        </nav>
+      <div
+        class="menu-alterno"
+        id="menu-alterno"
+        aria-label="Abrir menú"
+        role="button"
+        tabindex="0"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav>
+        <a href="./index.html"> <i class="fas fa-home"></i> Inicio </a>
+        <a href="./servicios.html"> <i class="fas fa-tooth"></i> Servicios </a>
+        <a href="#"><i class="fas fa-stethoscope"></i> Especialistas</a>
+        <a href="./ofertas.html"><i class="fas fa-tags"></i> Ofertas</a>
+        <a href="./sobrenosotros.html"> <i class="fas fa-users"></i> Sobre nosotros </a>
+        <a href="./citas.html"> <i class="fas fa-calendar-alt"></i> Citas </a>
+        <a id="iniciar" href="./login.html"><i class="fas fa-user"></i> Iniciar Sesión </a>
+      </nav>
+      </div>
     </header>
+    <div class="clearfix"></div>
     <!--fin encabezado-->
     <!--contenido-->
     <div class="filaD"> <!--primera columna imagen-->
@@ -66,37 +67,55 @@
             </div>
         </div>
     </div>
-    <footer class="piepagina">
+    <footer class="footer">
         <table>
-            <thead>
-                <tr>
-                    <th>Información</th>
-                    <th>Redes Sociales</th>
-                    <th>Copyright</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><!--fila-->
-                    <td>Clinica Dental Clasbo<br> <!--columna contenido-->
-                        <i class="fa-solid fa-location-dot"> </i>Dirección: Av 8 esq,C 29, Ignacio Zaragoza,Venustiano
-                        Carranza, 15000 CDMX<br>
-                        <i class="fa-solid fa-phone"> </i>Teléfono: 55-35-65-93-27<br>
-                        <i class="fa-solid fa-envelope"> </i> Email: contacto@clasbo.com<br>
-                    </td>
-                    <td class="redes-footer">
-                        <a href="#"><i class="fa-brands fa-whatsapp"> </i> </a>
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-facebook"></i>
-                    </td>
-                    <td class="copyright">
-                        &#169;Luis Antonio Bautista Patiño
-                    </td>
-                </tr>
-            </tbody>
+            <!--Tiene 3 etiquetas, tr (fila), th (encabezado columna), td (columna contenido)-->
+            <tr>
+                <th>Clínica Dental Clasbo</th>
+                <th>Redes Sociales</th>
+                <th>Copyright</th>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="https://maps.app.goo.gl/dtcW8Vk9sLSRdM9V6" target="_blank"
+                        style="text-decoration: none; color: inherit">
+                        Av. 8 Esq. C. 29 C, Ignacio Zaragoza, Venustiano Carranza, <br />
+                        15000 Ciudad de México, CDMX
+                    </a>
+                    <br />
+                    <i class="fas fa-phone"></i> Teléfono: 55 3565 9327 <br />
+                </td>
+                <td>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </td>
+                <td>
+                    <ul>
+                        <li>&#169; EDT - Elite Development Team, 2025</li>
+                        <li>
+                            <a class="whatsapp" href="https://wa.me/525619298974" target="_blank"><i
+                                    class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                        </li>
+                        <li><i class="fas fa-envelope"></i> Email:</li>
+                        <li>
+                            <a class="correo" href="mailto:contacto@edt.com">contacto@edt.com</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
         </table>
     </footer>
+    <script>
+        // Script para el menú alternativo
+        const menuToggle = document.getElementById("menu-alterno");
+        const nav = document.querySelector('.header nav');
 
-
+        menuToggle.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+    </script>
 </body>
 
 </html>
