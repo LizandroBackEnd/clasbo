@@ -27,7 +27,7 @@ body {
 
 .header_container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Apilados: logo arriba, nav abajo */
   align-items: center;
   position: relative;
 }
@@ -60,8 +60,8 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #0078a0;
-  position: relative;
+  background-color: #00113D;
+  position: relative; /* Para el menú hamburguesa */
   padding: 0 1rem;
   transition: background-color 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -80,7 +80,7 @@ body {
 
 .header a:hover,
 .header a:focus {
-  background-color: #00113d;
+  background-color: #0078A0;
   color: #b2e4f2;
   outline: none;
 }
@@ -279,7 +279,7 @@ body {
 /* 🔹 Footer */
 .footer {
   width: 100%;
-  background-color: #0078a0;
+  background-color: #00113D;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
   padding: 15px 5%;
@@ -287,34 +287,69 @@ body {
 
 .footer table {
   width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
+  border-collapse: collapse; /* Une bordes */
+  table-layout: fixed; /* Fuerza columnas iguales */
 }
 
 .footer th,
 .footer td {
   width: 33.33%;
   padding: 15px;
+  vertical-align: top;
   text-align: center;
+  word-break: break-word; /* Evita desbordes largos */
 }
 
+/* Encabezados */
 .footer th {
   font-size: 18px;
   font-weight: bold;
+  padding-bottom: 10px;
   border-bottom: 1px solid #ffffff50;
 }
 
+/* Íconos */
+.footer i {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+/* Íconos sociales */
 .footer i.fa-brands {
   font-size: 20px;
   margin: 5px 8px 5px 0;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .footer i.fa-brands:hover {
   color: #b2e4f2;
 }
 
+/* Enlaces dentro del footer */
 .footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Lista en la tercera columna */
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li {
+  margin-bottom: 5px;
+}
+
+.whatsapp {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.correo {
   color: #ffffff;
   text-decoration: none;
 }
