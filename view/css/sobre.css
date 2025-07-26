@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
   margin: 0;
@@ -18,63 +18,99 @@ body {
   clear: both;
 }
 
-/* HEADER (igual al index) */
+/* 🔹 HEADER (igual que en index) */
 .header {
-  width: 100%;
   position: relative;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .header_container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .header_logotext {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 10px;
-  justify-content: center;
 }
 
 .header_logotext img {
   width: 10%;
+  height: auto;
+  object-fit: contain;
 }
 
 .header_logotext h1 {
   font-family: "Roboto", sans-serif;
   font-size: 50px;
+  color: #000000;
   font-weight: 700;
-  color: #000;
+  letter-spacing: 0.5px;
 }
 
 .header nav {
   width: 100%;
+  max-width: 100%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  justify-content: space-around;
   background-color: #0078a0;
+  position: relative;
+  padding: 0 1rem;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.header nav a {
-  color: white;
-  text-decoration: none;
-  padding: 1rem 1.2rem;
+.header a {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
-  transition: background 0.3s ease;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 1rem 1.2rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.header nav a:hover {
+.header a:hover,
+.header a:focus {
   background-color: #00113d;
   color: #b2e4f2;
+  outline: none;
 }
 
 .menu-alterno {
   display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-color: #0078a0;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  gap: 6px;
+  z-index: 1500;
+  padding: 8px;
 }
 
-/* Secciones principales */
+.menu-alterno span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* 🔹 Secciones principales */
 .sobrenosotros {
   text-align: center;
   padding: 3% 5%;
@@ -92,12 +128,14 @@ body {
   margin-top: 1rem;
   line-height: 1.5;
 }
+
 .boton-contacto {
   text-decoration: none;
   color: #00113d;
   text-align: center;
 }
-/* Sección con imagen y texto */
+
+/* 🔹 Sección con imagen y texto */
 .info-nosotros {
   display: flex;
   justify-content: center;
@@ -129,23 +167,6 @@ body {
   margin-bottom: 15px;
 }
 
-.info-texto button {
-  background-color: #b2e4f2;
-  color: #000;
-  font-size: 16px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  width: fit-content;
-}
-
-.info-texto button:hover {
-  background-color: #89cbe2;
-  transform: scale(1.05);
-}
-
 .info-imagen {
   width: 45%;
   animation: fadeIn 1s ease-in;
@@ -157,7 +178,7 @@ body {
   object-fit: cover;
 }
 
-/* Misión y Visión */
+/* 🔹 Misión y Visión */
 .mision-vision {
   display: flex;
   justify-content: center;
@@ -173,7 +194,6 @@ body {
   width: 300px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: fadeInUp 0.8s ease forwards;
 }
@@ -191,7 +211,6 @@ body {
 .tarjeta h3 {
   font-size: 22px;
   color: #0078a0;
-  margin: 10px 0;
 }
 
 .tarjeta p {
@@ -199,7 +218,7 @@ body {
   line-height: 1.4;
 }
 
-/* Valores */
+/* 🔹 Valores */
 .valores {
   text-align: center;
   padding: 3% 5%;
@@ -223,7 +242,6 @@ body {
   background-color: #f2f2f2;
   padding: 15px;
   border-radius: 10px;
-  text-align: center;
   transition: transform 0.3s ease, background 0.3s ease;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   animation: fadeInUp 0.7s ease forwards;
@@ -232,7 +250,6 @@ body {
 .valor:hover {
   background-color: #b2e4f2;
   transform: translateY(-6px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .valor i {
@@ -241,12 +258,7 @@ body {
   margin-bottom: 10px;
 }
 
-.valor p {
-  font-size: 14px;
-  margin: 5px 0;
-}
-
-/* Imagen y frase final */
+/* 🔹 Imagen y frase final */
 .sonrisa-final {
   text-align: center;
   margin: 3% auto;
@@ -264,7 +276,7 @@ body {
   margin-top: 10px;
 }
 
-/* Footer */
+/* 🔹 Footer */
 .footer {
   width: 100%;
   background-color: #0078a0;
@@ -292,10 +304,6 @@ body {
   border-bottom: 1px solid #ffffff50;
 }
 
-.footer i {
-  margin-right: 8px;
-}
-
 .footer i.fa-brands {
   font-size: 20px;
   margin: 5px 8px 5px 0;
@@ -311,101 +319,41 @@ body {
   text-decoration: none;
 }
 
-.footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer ul li {
-  margin-bottom: 5px;
-}
-
-/* Animaciones */
+/* 🔹 Animaciones */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-/* Responsive */
+/* 🔹 RESPONSIVE (ajuste del logo como en Index) */
 @media (max-width: 768px) {
-  .header_logotext img {
-    width: 20%;
-  }
-
-  .header_logotext h1 {
-    font-size: 32px;
-  }
-
-  .info-nosotros {
+  .header_container {
     flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .header_logotext {
+    flex-direction: column;   /* 🔹 logo arriba, nombre abajo */
+    align-items: center;
     text-align: center;
   }
 
-  .info-texto,
-  .info-imagen {
-    width: 90%;
+  .header_logotext img {
+    width: 20%;
+    margin-bottom: 5px;
   }
 
-  .info-texto {
-    align-items: center;
+  .header_logotext h1 {
+    font-size: 28px;
   }
 
-  .mision-vision {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .valores-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .sonrisa-final img {
-    width: 80%;
-  }
-}
-.menu-alterno {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  background-color: #0078a0;
-  border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  gap: 6px;
-  z-index: 1500;
-  padding: 8px;
-}
-
-.menu-alterno span {
-  display: block;
-  width: 24px;
-  height: 3px;
-  background-color: #fff;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-@media (max-width: 768px) {
   .menu-alterno {
     display: flex;
     align-self: flex-end;
@@ -431,7 +379,7 @@ body {
 
   .header nav a {
     padding: 12px 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255,255,255,0.2);
     text-align: center;
     font-size: 16px;
     display: block;
@@ -441,15 +389,16 @@ body {
     border-top: none;
   }
 
-  /* Footer ocultar columnas */
+  .info-nosotros { flex-direction: column; text-align: center; }
+  .info-texto, .info-imagen { width: 90%; }
+  .mision-vision { flex-direction: column; align-items: center; }
+  .valores-grid { flex-direction: column; align-items: center; }
+  .sonrisa-final img { width: 80%; }
+
+  /* Ocultar columnas del footer */
   .footer table tr th:nth-child(2),
   .footer table tr td:nth-child(2),
   .footer table tr th:nth-child(3),
-  .footer table tr td:nth-child(3) {
-    display: none;
-  }
-
-  .footer table {
-    font-size: 12px;
-  }
+  .footer table tr td:nth-child(3) { display: none; }
+  .footer table { font-size: 12px; }
 }
