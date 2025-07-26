@@ -6,8 +6,11 @@
     <title>Clínica Dental Clasbo</title>
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/citas.css" />
-    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css' rel='stylesheet' />
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/locales/es.global.min.js"></script>
 
     <script src="calendario.js"></script>
@@ -38,8 +41,12 @@
 
         <nav>
           <a href="./index.html"> <i class="fas fa-home"></i> Inicio </a>
-          <a href="./servicios.html"> <i class="fas fa-tooth"></i> Servicios </a>
-          <a href="./Especialista.html"><i class="fas fa-stethoscope"></i> Especialistas</a>
+          <a href="./servicios.html">
+            <i class="fas fa-tooth"></i> Servicios
+          </a>
+          <a href="./Especialista.html"
+            ><i class="fas fa-stethoscope"></i> Especialistas</a
+          >
           <a href="./ofertas.html"><i class="fas fa-tags"></i> Ofertas</a>
           <a href="./sobrenosotros.html">
             <i class="fas fa-users"></i> Sobre nosotros
@@ -198,7 +205,7 @@
       </table>
     </footer>
     <script>
-      // Script para el menú alternativo
+      // menú alternativo
       const menuToggle = document.getElementById("menu-alterno");
       const nav = document.querySelector(".header nav");
 
@@ -208,11 +215,30 @@
     </script>
     <!-- solo simula el envío del formulario -->
     <script>
-  function agendarCita() {
-    alert('¡Gracias! Cita agendada');
-    window.location.href = './index.html';
-    return false; // Evita que se recargue la página
-  }
-</script>
+      document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault(); // Evita que se recargue la página
+
+        //mensaje de confirmación
+        const mensaje = document.createElement("div");
+        mensaje.textContent = "✅ ¡Gracias! Cita agendada correctamente.";
+        mensaje.style.background = "#e0f7e9";
+        mensaje.style.color = "#2e7d32";
+        mensaje.style.padding = "15px";
+        mensaje.style.margin = "20px auto";
+        mensaje.style.textAlign = "center";
+        mensaje.style.borderRadius = "10px";
+        mensaje.style.fontSize = "18px";
+        mensaje.style.maxWidth = "600px";
+
+        const formulario = document.querySelector("form");
+        formulario.parentNode.insertBefore(mensaje, formulario);
+        formulario.reset(); // Limpia los campos
+
+        // 3 segundos
+        setTimeout(() => {
+          window.location.href = "index.html";
+        }, 3000);
+      });
+    </script>
   </body>
 </html>
