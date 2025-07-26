@@ -142,7 +142,6 @@
   font-weight: bold;
 }
 
-/* Grupos de input modernos */
 .input-group {
   display: flex;
   align-items: center;
@@ -201,7 +200,6 @@
   font-style: italic;
 }
 
-/* Botón moderno */
 .cita-button {
   width: 100%;
   padding: 15px;
@@ -235,7 +233,6 @@
   font-size: 18px;
 }
 
-/* Sección de información adicional */
 .info-section {
   margin-top: 30px;
 }
