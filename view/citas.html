@@ -6,8 +6,11 @@
     <title>Clínica Dental Clasbo</title>
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/citas.css" />
-    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css' rel='stylesheet' />
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/locales/es.global.min.js"></script>
 
     <script src="calendario.js"></script>
@@ -38,8 +41,12 @@
 
         <nav>
           <a href="./index.html"> <i class="fas fa-home"></i> Inicio </a>
-          <a href="./servicios.html"> <i class="fas fa-tooth"></i> Servicios </a>
-          <a href="./Especialista.html"><i class="fas fa-stethoscope"></i> Especialistas</a>
+          <a href="./servicios.html">
+            <i class="fas fa-tooth"></i> Servicios
+          </a>
+          <a href="./Especialista.html"
+            ><i class="fas fa-stethoscope"></i> Especialistas</a
+          >
           <a href="./ofertas.html"><i class="fas fa-tags"></i> Ofertas</a>
           <a href="./sobrenosotros.html">
             <i class="fas fa-users"></i> Sobre nosotros
@@ -62,72 +69,91 @@
 
       <div id="calendario"></div>
 
-      <div id="formulario-cita"><br>
-        <h3>Fecha seleccionada: <span id="fechaSeleccionada"></span></h3>
-        <form class="form_citas" onsubmit="return agendarCita();">
-          <input type="hidden" id="fecha" name="fecha" /><br>
+      <div id="formulario-cita">
+        <div class="form-container">
+          <h3>Fecha seleccionada: <span id="fechaSeleccionada"></span></h3>
+          <form class="form_citas" onsubmit="return agendarCita();">
+            <input type="hidden" id="fecha" name="fecha" />
 
-          <label for="nombre">Nombre</label>
-          <input type="text" id="nombre" name="nombre" required />
+            <div class="input-group">
+              <i class="fas fa-user"></i>
+              <input type="text" id="nombre" name="nombre" placeholder="Nombre(s)" required />
+            </div>
 
-          <label for="apellido">Apellido Paterno</label>
-          <input type="text" id="apellido_p" name="apellido" required />
+            <div class="input-group">
+              <i class="fas fa-user"></i>
+              <input type="text" id="apellido_p" name="apellido" placeholder="Apellido Paterno" required />
+            </div>
 
-          <label for="apellido_m">Apellido Materno</label>
-          <input type="text" id="apellido_m" name="apellido_m" required />
+            <div class="input-group">
+              <i class="fas fa-user"></i>
+              <input type="text" id="apellido_m" name="apellido_m" placeholder="Apellido Materno" required />
+            </div>
 
-          <label for="email">Correo electrónico</label>
-          <input type="email" id="email" name="email" required />
+            <div class="input-group">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="email" name="email" placeholder="Correo electrónico" required />
+            </div>
 
-          <label for="telefono">Teléfono</label>
-          <input type="tel" id="telefono" name="telefono" required />
+            <div class="input-group">
+              <i class="fas fa-phone"></i>
+              <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required />
+            </div>
 
-          <label for="servicio">Servicio</label>
-          <select id="servicio" name="servicio" required>
-            <option value="">Selecciona un servicio</option>
-            <option value="ortopedia_dental">Ortopedia dental</option>
-            <option value="odontopediatria">Odontopediatría</option>
-            <option value="tratamiento">Tratamiento previo para la colocación de implantes</option>
-            <option value="implantes">Implantes</option>
-            <option value="periodoncia">Periodoncia</option>
-            <option value="cirugia_bucal">Cirugía bucal</option>
-            <option value="cirugia_maxilofacial">Cirugía maxilofacial</option>
-            <option value="diagnostico">Diagnóstico</option>
-            <option value="operatoria_dental">Operatoria dental</option>
-            <option value="oclusion_protesica">Oclusión protésica</option>
-            <option value="diseno_sonrisa">Diseño de sonrisa</option>
-            <option value="tratamiento_ortodoncia">Tratamiento de ortodoncia</option>
-            <option value="alineadores">Alineadores y retenedor</option>
-            <option value="trauma_facial_dental">Trauma facial y dental</option>
-            <option value="endodoncia">Endodoncia</option>
-            <option value="protesis_bucal">Prótesis bucal</option>
-            <option value="patologia">Patología</option>
-          </select><br>
+            <div class="input-group">
+              <i class="fas fa-tooth"></i>
+              <select id="servicio" name="servicio" required>
+                <option value="">Selecciona un servicio</option>
+                <option value="ortopedia_dental">Ortopedia dental</option>
+                <option value="odontopediatria">Odontopediatría</option>
+                <option value="tratamiento">Tratamiento previo para la colocación de implantes</option>
+                <option value="implantes">Implantes</option>
+                <option value="periodoncia">Periodoncia</option>
+                <option value="cirugia_bucal">Cirugía bucal</option>
+                <option value="cirugia_maxilofacial">Cirugía maxilofacial</option>
+                <option value="diagnostico">Diagnóstico</option>
+                <option value="operatoria_dental">Operatoria dental</option>
+                <option value="oclusion_protesica">Oclusión protésica</option>
+                <option value="diseno_sonrisa">Diseño de sonrisa</option>
+                <option value="tratamiento_ortodoncia">Tratamiento de ortodoncia</option>
+                <option value="alineadores">Alineadores y retenedor</option>
+                <option value="trauma_facial_dental">Trauma facial y dental</option>
+                <option value="endodoncia">Endodoncia</option>
+                <option value="protesis_bucal">Prótesis bucal</option>
+                <option value="patologia">Patología</option>
+              </select>
+            </div>
 
-          <label for="hora">Hora</label>
-          <select id="hora" name="hora" required>
-            <option value="">Selecciona una hora</option>
-          </select>
+            <div class="input-group">
+              <i class="fas fa-clock"></i>
+              <select id="hora" name="hora" required>
+                <option value="">Selecciona una hora</option>
+              </select>
+            </div>
 
-          <input
-            type="submit"
-            value="Agendar cita"
-            id="boton_cita"
-          />
-        </form>
+            <button type="submit" class="cita-button" id="boton_cita">
+              <i class="fas fa-calendar-plus"></i>
+              Agendar cita
+            </button>
+          </form>
+        </div>
       </div>
 
-      <br />
-      <p>
-        Recibirás un recordatorio por correo un día antes. Si necesitas cambiar
-        o cancelar tu cita, contáctanos al (55) 3565 9327.
-      </p>
+      <div class="info-section">
+        <p class="reminder-text">
+          <i class="fas fa-info-circle"></i>
+          Recibirás un recordatorio por correo un día antes. Si necesitas cambiar
+          o cancelar tu cita, contáctanos al (55) 3565 9327.
+        </p>
 
-      <h3>Recomendaciones antes de tu cita</h3>
-      <ul>
-        <li>- Llega 10 minutos antes</li>
-        <li>- En caso de fiebre o malestar, reprograma tu cita</li>
-      </ul>
+        <div class="recommendations">
+          <h3><i class="fas fa-lightbulb"></i> Recomendaciones antes de tu cita</h3>
+          <ul>
+            <li><i class="fas fa-clock"></i> Llega 10 minutos antes</li>
+            <li><i class="fas fa-thermometer-half"></i> En caso de fiebre o malestar, reprograma tu cita</li>
+          </ul>
+        </div>
+      </div>
     </div>
     <footer class="footer">
       <table>
@@ -178,30 +204,41 @@
         </tr>
       </table>
     </footer>
-   <script>
-  function agendarCita() {
-    const mensaje = document.createElement("div");
-    mensaje.textContent = "✅ ¡Gracias! Tu cita ha sido agendada correctamente.";
-    mensaje.style.background = "#e0f7e9";
-    mensaje.style.color = "#2e7d32";
-    mensaje.style.padding = "15px";
-    mensaje.style.margin = "20px auto";
-    mensaje.style.textAlign = "center";
-    mensaje.style.borderRadius = "10px";
-    mensaje.style.fontSize = "18px";
-    mensaje.style.maxWidth = "600px";
+    <script>
+      // menú alternativo
+      const menuToggle = document.getElementById("menu-alterno");
+      const nav = document.querySelector(".header nav");
 
-    const formulario = document.querySelector(".form_citas");
-    formulario.parentNode.insertBefore(mensaje, formulario);
-    formulario.reset();
+      menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
+    <!-- solo simula el envío del formulario -->
+    <script>
+      document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault(); // Evita que se recargue la página
 
-    setTimeout(() => {
-      window.location.href = "./index.html";
-    }, 3000);
+        //mensaje de confirmación
+        const mensaje = document.createElement("div");
+        mensaje.textContent = "✅ ¡Gracias! Cita agendada correctamente.";
+        mensaje.style.background = "#e0f7e9";
+        mensaje.style.color = "#2e7d32";
+        mensaje.style.padding = "15px";
+        mensaje.style.margin = "20px auto";
+        mensaje.style.textAlign = "center";
+        mensaje.style.borderRadius = "10px";
+        mensaje.style.fontSize = "18px";
+        mensaje.style.maxWidth = "600px";
 
-    return false; // Evita que se recargue la página
-  }
-</script>
+        const formulario = document.querySelector("form");
+        formulario.parentNode.insertBefore(mensaje, formulario);
+        formulario.reset(); // Limpia los campos
 
+        // 3 segundos
+        setTimeout(() => {
+          window.location.href = "index.html";
+        }, 3000);
+      });
+    </script>
   </body>
 </html>

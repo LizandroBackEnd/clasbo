@@ -103,18 +103,207 @@
 }
 
 .div_citas select {
-  width: 50%;
-  padding: 10px;
-  margin: 10px 0;
+  width: 100%;
+  padding: 12px;
+  margin: 0;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: none;
+  outline: none;
   font-family: "Roboto", sans-serif;
-  font-size: 1vw;
+  font-size: 16px;
+  background-color: transparent;
 }
 
 .div_citas form {
   width: 100%;
-  margin: auto; /* Centra el formulario */
+  margin: auto;
+}
+
+/* Contenedor del formulario */
+.form-container {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  border: 1px solid #e9ecef;
+}
+
+.form-container h3 {
+  text-align: center;
+  color: #0078a0;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+#fechaSeleccionada {
+  color: #00113d;
+  font-weight: bold;
+}
+
+/* Grupos de input modernos */
+.input-group {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.input-group:focus-within {
+  border-color: #0078a0;
+  box-shadow: 0 0 0 3px rgba(0, 120, 160, 0.1);
+  transform: translateY(-2px);
+}
+
+.input-group i {
+  margin-right: 12px;
+  color: #0078a0;
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+}
+
+.input-group input,
+.input-group select {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  background: transparent;
+}
+
+.input-group input::placeholder {
+  color: #888;
+  font-style: italic;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.input-group select {
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.input-group select option {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+}
+
+.input-group select option[value=""] {
+  color: #888;
+  font-style: italic;
+}
+
+/* Botón moderno */
+.cita-button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #0078a0 0%, #005f85 100%);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 120, 160, 0.3);
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.cita-button:hover {
+  background: linear-gradient(135deg, #005f85 0%, #00113d 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 120, 160, 0.4);
+}
+
+.cita-button:active {
+  transform: translateY(0);
+}
+
+.cita-button i {
+  font-size: 18px;
+}
+
+/* Sección de información adicional */
+.info-section {
+  margin-top: 30px;
+}
+
+.reminder-text {
+  background-color: #e8f4fd;
+  border: 1px solid #bee5eb;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+  color: #0c5460;
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.reminder-text i {
+  color: #0078a0;
+  margin-top: 2px;
+  font-size: 18px;
+}
+
+.recommendations {
+  background-color: #e8f4fd;
+  border: 1px solid #bee5eb;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.recommendations h3 {
+  color: #0c5460;
+  margin-bottom: 15px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.recommendations h3 i {
+  color: #0078a0;
+}
+
+.recommendations ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recommendations li {
+  color: #0c5460;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.recommendations li i {
+  color: #0078a0;
+  width: 16px;
+  text-align: center;
+}
+
+.recommendations li:last-child {
+  margin-bottom: 0;
 }
 
 .form_citas label {
@@ -151,51 +340,144 @@
 
 @media (max-width: 768px) {
   .div_citas {
-    width: 90%;
-    padding: 10px;
+    width: 95%;
+    padding: 15px;
   }
 
   .div_citas h2 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+  }
+
+  .form-container {
+    padding: 20px;
+    margin: 15px 0;
+  }
+
+  .form-container h3 {
+    font-size: 1.1rem;
+  }
+
+  .input-group {
+    padding: 10px 12px;
+    margin-bottom: 15px;
+  }
+
+  .input-group input,
+  .input-group select {
+    font-size: 15px;
+  }
+
+  .cita-button {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .info-section {
+    margin-top: 20px;
+  }
+
+  .reminder-text {
+    padding: 15px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .recommendations {
+    padding: 15px;
+  }
+
+  .recommendations h3 {
+    font-size: 16px;
+  }
+
+  .recommendations li {
+    font-size: 14px;
   }
 
   .div_citas h3,
   .div_citas p,
-  .div_citas ul,
-  .div_citas select,
-  .form_citas label {
-    font-size: 0.85rem;
+  .div_citas ul {
+    font-size: 14px;
   }
 
-  #boton_cita {
-    width: 70%;
-    font-size: 1.1rem;
-    padding: 14px;
+  .div_citas select,
+  .form_citas label {
+    font-size: 14px;
   }
 }
 
 @media (max-width: 500px) {
   .div_citas {
-    width: 95%;
-    padding: 8px;
+    width: 98%;
+    padding: 10px;
   }
 
   .div_citas h2 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+  }
+
+  .form-container {
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .form-container h3 {
+    font-size: 1rem;
+  }
+
+  .input-group {
+    padding: 8px 10px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+  }
+
+  .input-group i {
+    font-size: 14px;
+    width: 18px;
+  }
+
+  .input-group input,
+  .input-group select {
+    font-size: 14px;
+  }
+
+  .cita-button {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+
+  .info-section {
+    margin-top: 15px;
+  }
+
+  .reminder-text {
+    padding: 12px;
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+
+  .recommendations {
+    padding: 12px;
+  }
+
+  .recommendations h3 {
+    font-size: 15px;
+  }
+
+  .recommendations li {
+    font-size: 13px;
   }
 
   .div_citas h3,
   .div_citas p,
-  .div_citas ul,
-  .div_citas select,
-  .form_citas label {
-    font-size: 0.8rem;
+  .div_citas ul {
+    font-size: 13px;
   }
 
-  #boton_cita {
-    width: 80%;
-    font-size: 1.2rem;
-    padding: 16px;
+  .div_citas select,
+  .form_citas label {
+    font-size: 13px;
   }
 }
 
