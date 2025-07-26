@@ -125,3 +125,72 @@
             </div>
         </div>
     </div>
+    <div class="clearfix"> </div>
+    <footer class="footer">
+      <table>
+        <!--Tiene 3 etiquetas, tr (fila), th (encabezado columna), td (columna contenido)-->
+        <tr>
+          <th>Clínica Dental Clasbo</th>
+          <th>Redes Sociales</th>
+          <th>Copyright</th>
+        </tr>
+        <tr>
+          <td>
+            <i class="fas fa-map-marker-alt"></i>
+            <a
+              href="https://maps.app.goo.gl/dtcW8Vk9sLSRdM9V6"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              Av. 8 Esq. C. 29 C, Ignacio Zaragoza, Venustiano Carranza, <br />
+              15000 Ciudad de México, CDMX
+            </a>
+            <br />
+            <i class="fas fa-phone"></i> Teléfono: 55 3565 9327 <br />
+          </td>
+          <td>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+          </td>
+          <td>
+            <ul>
+              <li>&#169; EDT - Elite Development Team, 2025</li>
+              <li>
+                <a
+                  class="whatsapp"
+                  href="https://wa.me/525619298974"
+                  target="_blank"
+                  ><i class="fa-brands fa-whatsapp"></i> WhatsApp</a
+                >
+              </li>
+              <li><i class="fas fa-envelope"></i> Email:</li>
+              <li>
+                <a class="correo" href="mailto:contacto@edt.com"
+                  >contacto@edt.com</a
+                >
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </footer>
+    <script>
+      // Script para el menú alternativo
+      const menuToggle = document.getElementById("menu-alterno");
+      const nav = document.querySelector(".header nav");
+
+      menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
+    <!-- solo simula el envío del formulario -->
+    <script>
+  function agendarCita() {
+    alert('¡Gracias! Cita agendada');
+    window.location.href = './index.html';
+    return false; // Evita que se recargue la página
+  }
+</script>
+  </body>
+</html>
