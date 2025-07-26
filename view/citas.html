@@ -178,22 +178,30 @@
         </tr>
       </table>
     </footer>
-    <script>
-      // Script para el menú alternativo
-      const menuToggle = document.getElementById("menu-alterno");
-      const nav = document.querySelector(".header nav");
-
-      menuToggle.addEventListener("click", () => {
-        nav.classList.toggle("active");
-      });
-    </script>
-    <!-- solo simula el envío del formulario -->
-    <script>
+   <script>
   function agendarCita() {
-    alert('¡Gracias! Cita agendada');
-    window.location.href = './index.html';
+    const mensaje = document.createElement("div");
+    mensaje.textContent = "✅ ¡Gracias! Tu cita ha sido agendada correctamente.";
+    mensaje.style.background = "#e0f7e9";
+    mensaje.style.color = "#2e7d32";
+    mensaje.style.padding = "15px";
+    mensaje.style.margin = "20px auto";
+    mensaje.style.textAlign = "center";
+    mensaje.style.borderRadius = "10px";
+    mensaje.style.fontSize = "18px";
+    mensaje.style.maxWidth = "600px";
+
+    const formulario = document.querySelector(".form_citas");
+    formulario.parentNode.insertBefore(mensaje, formulario);
+    formulario.reset();
+
+    setTimeout(() => {
+      window.location.href = "./index.html";
+    }, 3000);
+
     return false; // Evita que se recargue la página
   }
 </script>
+
   </body>
 </html>

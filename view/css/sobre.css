@@ -18,7 +18,7 @@ body {
   clear: both;
 }
 
-/* 🔹 HEADER (igual que en index) */
+/* 🔹 HEADER  */
 .header {
   position: relative;
   width: 100%;
@@ -147,14 +147,12 @@ body {
   width: fit-content;
   max-width: 180px;
   white-space: nowrap;
-  /* Para centrarlo como bloque en su contenedor */
   display: block;          
 }
 
 
 
 
-/* 🔹 Sección con imagen y texto */
 .info-nosotros {
   display: flex;
   justify-content: center;
@@ -320,7 +318,6 @@ body {
   word-break: break-word; /* Evita desbordes largos */
 }
 
-/* Encabezados */
 .footer th {
   font-size: 18px;
   font-weight: bold;
@@ -346,14 +343,12 @@ body {
   color: #b2e4f2;
 }
 
-/* Enlaces dentro del footer */
 .footer a {
   color: #ffffff;
   text-decoration: none;
   font-weight: 500;
 }
 
-/* Lista en la tercera columna */
 .footer ul {
   list-style: none;
   padding: 0;
@@ -385,7 +380,7 @@ body {
   to { opacity: 1; }
 }
 
-/* 🔹 RESPONSIVE (ajuste del logo como en Index) */
+/* 🔹 RESPONSIVE */
 @media (max-width: 768px) {
   .header_container {
     flex-direction: column;

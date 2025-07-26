@@ -1,6 +1,4 @@
-/* ============================
-   Fuentes y reset general
-============================ */
+
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&display=swap");
 
 * {
@@ -15,9 +13,7 @@ body {
   background-color: #fff;
 }
 
-/* ============================
-   Encabezado (Header)
-============================ */
+/* Encabezado */
 .header {
   position: relative;
   width: 100%;
@@ -120,9 +116,7 @@ body {
   transition: all 0.3s ease;
 }
 
-/* ============================
-   Perfil del usuario
-============================ */
+/* Perfil del usuario */
 .perfil-usuario {
   display: flex;
   align-items: center;
@@ -147,9 +141,7 @@ body {
   font-size: 24px;
 }
 
-/* ============================
-   Contenido principal
-============================ */
+/*Contenido principal*/
 .contenedor {
   max-width: 800px;
   margin: 30px auto;
@@ -182,9 +174,7 @@ body {
   color: #004b6b;
 }
 
-/* ============================
-   Footer unificado
-============================ */
+/* Footer unificado */
 .footer {
   width: 100%;
   background-color: #00113D;
@@ -234,14 +224,12 @@ body {
   color: #b2e4f2;
 }
 
-/* Enlaces dentro del footer */
 .footer a {
   color: #ffffff;
   text-decoration: none;
   font-weight: 500;
 }
 
-/* Lista en la tercera columna */
 .footer ul {
   list-style: none;
   padding: 0;
@@ -262,9 +250,7 @@ body {
   text-decoration: none;
 }
 
-/* ============================
-   Responsive (Tablets)
-============================ */
+/*Responsive (Tablets)*/
 @media (max-width: 768px) {
   .header_container {
     flex-direction: column;
@@ -371,9 +357,7 @@ body {
   }
 }
 
-/* ============================
-   Responsive (Móvil)
-============================ */
+/* Responsive (Móvil) */
 @media (max-width: 500px) {
   .header_logotext h1 {
     font-size: 6vw;

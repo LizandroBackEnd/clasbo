@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    <!-- Encabezado unificado con menú hamburguesa -->
+    <!-- Encabezado-->
     <header class="header">
       <div class="header_container">
         <div class="header_logotext">
@@ -78,10 +78,9 @@
 
     <div class="clearfix"></div>
 
-    <!-- Pie de página unificado -->
+    <!-- Pie de página-->
     <footer class="footer">
       <table>
-        <!--Tiene 3 etiquetas, tr (fila), th (encabezado columna), td (columna contenido)-->
         <tr>
           <th>Clínica Dental Clasbo</th>
           <th>Redes Sociales</th>
@@ -128,15 +127,16 @@
         </tr>
       </table>
     </footer>
+    <!--scripts-->
     <script>
-      // Script para el menú alternativo con animación suave
+      // Script 
       const menuToggle = document.getElementById("menu-alterno");
       const nav = document.querySelector('.header nav');
 
       menuToggle.addEventListener("click", () => {
         nav.classList.toggle("active");
         
-        // Agregar transición con delay para cada enlace
+        // transición
         if (nav.classList.contains("active")) {
           const links = nav.querySelectorAll('a');
           links.forEach((link, index) => {
@@ -150,7 +150,6 @@
         }
       });
 
-      // Cerrar menú al hacer clic en un enlace (opcional)
       const navLinks = document.querySelectorAll('.header nav a');
       navLinks.forEach(link => {
         link.addEventListener('click', () => {

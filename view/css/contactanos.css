@@ -1,6 +1,4 @@
-/* =========================
-   Fuentes y Reset General
-========================= */
+
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&display=swap");
 
 * {
@@ -15,9 +13,7 @@ body {
   background-color: #fff;
 }
 
-/* =========================
-   Encabezado (Header)
-========================= */
+/*Encabezado */
 .header {
   position: relative;
   width: 100%;
@@ -84,9 +80,7 @@ body {
   outline: none;
 }
 
-/* =========================
-   Menú hamburguesa (solo móvil)
-========================= */
+/*Menú hamburguesa */
 .menu-alterno {
   display: none;
   flex-direction: column;
@@ -112,9 +106,7 @@ body {
   transition: all 0.3s ease;
 }
 
-/* =========================
-   Formulario de contacto
-========================= */
+/*Formulario de contacto*/
 .formulario-contacto {
   max-width: 600px;
   margin: 40px auto;
@@ -165,9 +157,7 @@ form button:hover {
   background-color: #005f7a;
 }
 
-/* =========================
-   Pie de página (Footer)
-========================= */
+/* Pie de página */
 .footer {
   width: 100%;
   background-color: #00113D;
@@ -191,7 +181,7 @@ form button:hover {
   word-break: break-word; /* Evita desbordes largos */
 }
 
-/* Encabezados */
+
 .footer th {
   font-size: 18px;
   font-weight: bold;
@@ -217,14 +207,14 @@ form button:hover {
   color: #b2e4f2;
 }
 
-/* Enlaces dentro del footer */
+
 .footer a {
   color: #ffffff;
   text-decoration: none;
   font-weight: 500;
 }
 
-/* Lista en la tercera columna */
+
 .footer ul {
   list-style: none;
   padding: 0;
@@ -245,9 +235,7 @@ form button:hover {
   text-decoration: none;
 }
 
-/* =========================
-   Responsive - Móvil
-========================= */
+/*Responsive*/
 @media (max-width: 768px) {
   .header_logotext img {
     width: 20%;
