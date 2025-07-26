@@ -10,9 +10,13 @@
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 /* Header */
-.header {
+.header,
+.header_sesion {
   width: 100%;
   padding: 20px 0;
   background-color: #00113D;
@@ -39,12 +43,31 @@ body {
   width: 150px;
   height: auto;
 }
-.screen {
-  min-height: 100vh;
+
+.header_sesion {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  gap: 20px;
+}
+
+.header_sesion img {
+  width: 120px;
+  height: auto;
+}
+
+.header_sesion h1 {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+.screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem; /* Aumenté el padding vertical de 2rem a 4rem */
+  flex: 1; /* Ocupa el espacio disponible entre header y footer */
 }
 
 .register-container {
@@ -54,6 +77,7 @@ body {
   width: 100%;
   max-width: 450px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 2rem 0; /* Agregué margen vertical para más separación */
 }
 
 .register-container h2 {
@@ -238,6 +262,14 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .screen {
+    padding: 3rem 1rem; /* Ajusté el padding para móviles */
+  }
+
+  .register-container {
+    margin: 1rem 0; /* Menos margen en móviles para aprovechar el espacio */
+  }
+
   .header {
     position: relative;
     z-index: 100;
@@ -268,6 +300,15 @@ body {
 }
 
 @media (max-width: 500px) {
+  .screen {
+    padding: 2rem 1rem; /* Padding más conservador para pantallas muy pequeñas */
+  }
+
+  .register-container {
+    margin: 0.5rem 0; /* Margen mínimo para pantallas muy pequeñas */
+    padding: 20px; /* Menos padding interno para aprovechar el espacio */
+  }
+
   .header {
     position: relative;
     z-index: 100;
