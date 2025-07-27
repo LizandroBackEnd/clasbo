@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("#login-form");
   const feedback = document.querySelector("#form-feedback");
+  
+  // Variables para control de intentos
+  let failedAttempts = parseInt(localStorage.getItem('loginFailedAttempts')) || 0;
+  let blockUntil = parseInt(localStorage.getItem('loginBlockUntil')) || 0;
+  const MAX_ATTEMPTS = 5;
+  const BLOCK_TIME = 30000; // 30 segundos en milisegundos
 
   function showMessage(type, message) {
     if (!feedback) {
@@ -22,6 +28,65 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  function checkIfBlocked() {
+    const currentTime = Date.now();
+    if (currentTime < blockUntil) {
+      const remainingTime = Math.ceil((blockUntil - currentTime) / 1000);
+      showMessage("error", `Demasiados intentos fallidos. Espera ${remainingTime} segundos para intentar de nuevo.`);
+      return true;
+    }
+    
+    // Si el tiempo de bloqueo ya pasó, reiniciar contadores
+    if (blockUntil > 0 && currentTime >= blockUntil) {
+      failedAttempts = 0;
+      localStorage.removeItem('loginFailedAttempts');
+      localStorage.removeItem('loginBlockUntil');
+      blockUntil = 0;
+    }
+    
+    return false;
+  }
+
+  function updateFailedAttempts() {
+    failedAttempts++;
+    localStorage.setItem('loginFailedAttempts', failedAttempts.toString());
+    
+    if (failedAttempts >= MAX_ATTEMPTS) {
+      blockUntil = Date.now() + BLOCK_TIME;
+      localStorage.setItem('loginBlockUntil', blockUntil.toString());
+      showMessage("error", `Has excedido el número de intentos permitidos. Espera 30 segundos para intentar de nuevo.`);
+      startCountdown();
+    } else {
+      const remainingAttempts = MAX_ATTEMPTS - failedAttempts;
+      showMessage("error", `Credenciales incorrectas. Te quedan ${remainingAttempts} intento(s).`);
+    }
+  }
+
+  function startCountdown() {
+    const countdownInterval = setInterval(() => {
+      const currentTime = Date.now();
+      const remainingTime = Math.ceil((blockUntil - currentTime) / 1000);
+      
+      if (remainingTime <= 0) {
+        clearInterval(countdownInterval);
+        failedAttempts = 0;
+        localStorage.removeItem('loginFailedAttempts');
+        localStorage.removeItem('loginBlockUntil');
+        blockUntil = 0;
+        feedback.style.display = "none";
+      } else {
+        showMessage("error", `Demasiados intentos fallidos. Espera ${remainingTime} segundos para intentar de nuevo.`);
+      }
+    }, 1000);
+  }
+
+  function resetAttempts() {
+    failedAttempts = 0;
+    localStorage.removeItem('loginFailedAttempts');
+    localStorage.removeItem('loginBlockUntil');
+    blockUntil = 0;
+  }
+
   if (!form) {
     console.error("Form with ID 'login-form' not found");
     return;
@@ -32,8 +97,18 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
+  // Verificar al cargar la página si hay un bloqueo activo
+  if (checkIfBlocked()) {
+    startCountdown();
+  }
+
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
+
+    // Verificar si el usuario está bloqueado
+    if (checkIfBlocked()) {
+      return;
+    }
 
     if (!form) {
       console.error("Form with ID 'login-form' not found");
@@ -61,9 +136,12 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("Response:", result);
 
       if (!response.ok) {
-        showMessage("error", "Credenciales incorrectas");
+        updateFailedAttempts();
         return;
       }
+
+      // Login exitoso, reiniciar intentos
+      resetAttempts();
 
       localStorage.setItem("pb_token", result.token);
       localStorage.setItem("pb_user", JSON.stringify(result.record));
