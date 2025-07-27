@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clínica Dental Clasbo</title>
-    <link rel="stylesheet" href="css/detalles.css" />
+    <link rel="stylesheet" href="../css/detalles.css" /> 
+    <link rel="stylesheet" href="../css/index.css" />
     <script
       src="https://kit.fontawesome.com/0edb134f6f.js"
       crossorigin="anonymous"
@@ -15,7 +16,7 @@
         <header class="header">
       <div class="header_container">
         <div class="header_logotext">
-        <img src="img/logo.png" alt="Clasbo+" />
+        <img src="../img/logo.png" alt="Clasbo+" />
         <h1>Clínica Dental Clasbo</h1>
       </div>
 
@@ -32,34 +33,37 @@
       </div>
 
       <nav>
-        <a href="./index.html"> <i class="fas fa-home"></i> Inicio </a>
-        <a href="#"> <i class="fas fa-tooth"></i> Servicios </a>
-        <a href="#"><i class="fas fa-stethoscope"></i> Especialistas</a>
-        <a href="./ofertas.html"><i class="fas fa-tags"></i> Ofertas</a>
-        <a href="./sobrenosotros.html"> <i class="fas fa-users"></i> Sobre nosotros </a>
-        <a href="#"> <i class="fas fa-calendar-alt"></i> Citas </a>
-        <a id="iniciar" href="./login.html"><i class="fas fa-user"></i> Iniciar Sesión </a>
+        <a href="../index.html"> <i class="fas fa-home"></i> Inicio </a>
+        <a href="../servicios.html"> <i class="fas fa-tooth"></i> Servicios </a>
+        <a href="../Especialista.html"><i class="fas fa-stethoscope"></i> Especialistas</a>
+        <a href="../ofertas.html"><i class="fas fa-tags"></i> Ofertas</a>
+        <a href="../sobrenosotros.html"> <i class="fas fa-users"></i> Sobre nosotros </a>
+        <a href="../citas.html"> <i class="fas fa-calendar-alt"></i> Citas </a>
+        <a id="iniciar" href="../login.html"><i class="fas fa-user"></i> Iniciar Sesión </a>
       </nav>
       </div>
     </header>
     <div class="clearfix"></div>
         <div class="columna">
                 <div class="galeria">
-                    <img src="img/services/protesis.png" alt="">
+                    <img src="../img/services/cirugia_dental.png" alt="">
                 </div>
 
                  <div class="detalle">
-                        <p>Endodoncia</p> 
-                        <p id="contenido">Tratamiento de conductos para salvar tus piezas dentales</p>
+                        <p>Diseño de Sonrisa</p> 
+                        <p id="contenido">Elimina placa, sarro y manchas mientras previenes enfermedades
+              dentales con nuestra limpieza profunda realizada por
+              especialistas.</p>
                         <p id="precio"> $1,000 MXN</p>
-                        <button id="botonagendar" onclick="window.location.href='citas.html'">Agendar</button>
+                         <button id="botonagendar" onclick="window.location.href='../citas.html'">Agendar</button>
                     </div>
             
 
             </div>
 
-        <footer class="footer">
+            <footer class="footer">
       <table>
+        <!--Tiene 3 etiquetas, tr (fila), th (encabezado columna), td (columna contenido)-->
         <tr>
           <th>Clínica Dental Clasbo</th>
           <th>Redes Sociales</th>
@@ -107,31 +111,12 @@
       </table>
     </footer>
     <script>
+      // Script para el menú alternativo
       const menuToggle = document.getElementById("menu-alterno");
       const nav = document.querySelector('.header nav');
 
       menuToggle.addEventListener("click", () => {
         nav.classList.toggle("active");
-        
-        // Agregar transición con delay para cada enlace
-        if (nav.classList.contains("active")) {
-          const links = nav.querySelectorAll('a');
-          links.forEach((link, index) => {
-            link.style.transitionDelay = `${index * 0.1}s`;
-          });
-        } else {
-          const links = nav.querySelectorAll('a');
-          links.forEach((link) => {
-            link.style.transitionDelay = '0s';
-          });
-        }
-      });
-
-      const navLinks = document.querySelectorAll('.header nav a');
-      navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          nav.classList.remove('active');
-        });
       });
     </script>
     </body>

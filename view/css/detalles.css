@@ -1,3 +1,4 @@
+/* ======== ESTILOS GLOBALES Y DESKTOP ======== */
 .columna {
     margin: 4% auto;
     width: 60vw;
@@ -50,7 +51,6 @@
 }
 
 .detalle p {
-    font-family: "Roboto";
     font-size: 1.8vw;
     letter-spacing: 0.5px;
     color: #00113d;
@@ -58,18 +58,16 @@
 }
 
 #contenido {
-    font-family: "Roboto", sans-serif;
     font-size: 1vw;
     letter-spacing: 0.5px;
     color: #00113d;
 }
 
 #precio {
-    font-family: "Roboto", sans-serif;
     font-size: 2vw;
     font-weight: bold; 
     color: #0078a0;
-    margin-bottom: 0.5em; /* Reduce bottom margin for tighter spacing */
+    margin-bottom: 0.5em;
     display: block;
 }
 
@@ -84,51 +82,34 @@
     border-style: outset;
     width: 80%;
     display: block;
-    margin: 0 auto 1.5em auto; /* Center and add space below */
-    font-family: "Roboto", sans-serif;
-} 
+    margin: 0 auto 1.5em auto;
+}
+
 #botonagendar:hover {
     background-color: #005f7a;
 }
+
 .clearfix::after {
     content: "";
     display: table;
-    clear: both; /* Limpia los flotantes */
+    clear: both;
 }
+
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Reseteo de márgenes y rellenos */
-}
-
-.header {
-  position: relative;
-  width: 100%;
   box-sizing: border-box;
 }
 
-.header_container {
-  display: flex;
-  flex-direction: column; /* Apilados: logo arriba, nav abajo */
-  align-items: center;
-  position: relative;
-}
+/* ======== HEADER ======== */
 
-.header_logotext {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
+.header { position: relative; width: 100%; }
+.header_container { display: flex; flex-direction: column; align-items: center; position: relative; }
+.header_logotext { display: flex; justify-content: center; align-items: center; gap: 10px; }
 
-.header_logotext img {
-  width: 10%;
-  height: auto;
-  object-fit: contain;
-}
-
+.header_logotext img { width: 10%; height: auto; object-fit: contain; }
 .header_logotext h1 {
   font-family: "Roboto", sans-serif;
   font-size: 50px;
@@ -139,14 +120,12 @@
 
 .header nav {
   width: 100%;
-  max-width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   background-color: #00113D;
-  position: relative; /* Para el menú hamburguesa */
   padding: 0 1rem;
+  flex-wrap: wrap;
   transition: background-color 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -170,7 +149,7 @@
 }
 
 .menu-alterno {
-  display: none; /* Oculto por defecto */
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -180,20 +159,12 @@
   background-color: #0078a0;
   border-radius: 50%;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  justify-content: center;
-  align-items: center;
-  z-index: 1100;
-  transition: background-color 0.3s ease;
-  padding: 8px;
-  box-sizing: border-box;
-  flex-direction: column;
   gap: 6px;
   z-index: 1500;
+  padding: 8px;
 }
 
-.menu-alterno:hover {
-  background-color: #005f7a;
-}
+.menu-alterno:hover { background-color: #005f7a; }
 
 .menu-alterno span {
   display: block;
@@ -204,14 +175,7 @@
   transition: all 0.3s ease;
 }
 
-/* Cuándo queremos que los elementos dejen de flotar de izquierda a derecha*/
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both; /* Limpia los flotantes */
-}
-
-/*Footer*/
+/* ======== FOOTER ======== */
 
 .footer {
   width: 100%;
@@ -223,183 +187,96 @@
 
 .footer table {
   width: 100%;
-  border-collapse: collapse; /* Une bordes */
-  table-layout: fixed; /* Fuerza columnas iguales */
-  color: #ffffff; /* Ensure table text is white */
+  border-collapse: collapse;
+  table-layout: fixed;
+  color: #ffffff;
 }
 
 .footer th,
 .footer td {
   width: 33.33%;
   padding: 15px;
-  vertical-align: top;
   text-align: center;
-  word-break: break-word; /* Evita desbordes largos */
-  color: #ffffff; /* Ensure cell text is white */
+  vertical-align: top;
 }
 
-/* Encabezados */
 .footer th {
   font-size: 18px;
   font-weight: bold;
   padding-bottom: 10px;
   border-bottom: 1px solid #ffffff50;
-  color: #ffffff; /* Ensure header text is white */
 }
 
-/* Íconos */
-.footer i {
-  margin-right: 8px;
-  font-size: 16px;
-  color: #ffffff; /* Ensure icon color is white */
-}
-
-/* Íconos sociales */
+.footer i { margin-right: 8px; font-size: 16px; color: #ffffff; }
 .footer i.fa-brands {
   font-size: 20px;
   margin: 5px 8px 5px 0;
   cursor: pointer;
   transition: color 0.3s ease;
-  color: #ffffff; /* Ensure social icon color is white */
 }
 
-.footer i.fa-brands:hover {
-  color: #2e96b3;
-}
+.footer i.fa-brands:hover { color: #2e96b3; }
+.footer a, .footer ul li { color: #ffffff; text-decoration: none; font-weight: 500; }
+.footer ul { list-style: none; padding: 0; margin: 0; }
 
-/* Enlaces dentro del footer */
-.footer a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-/* Lista en la tercera columna */
-.footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  color: #ffffff; /* Ensure list text is white */
-}
-
-.footer ul li {
-  margin-bottom: 5px;
-  color: #ffffff; /* Ensure list item text is white */
-}
-
-.whatsapp {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.correo {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-#iniciar {
-  float: right;
-  color: #ffffff; /* Ensure button/link text is white */
-}
-
-/* Index Responsivo */
-
+/* ======== RESPONSIVE ======== */
 @media (max-width: 768px) {
 
-    .columna {
-        flex-direction: column;
-        width: 80%;
-        min-width: 0;
-        max-width: 100vw;
-        margin: 4% auto; /* Center horizontally */
-        box-shadow: 0 2px 8px #0078a0;
-        border-radius: 12px;
-    }
+  .columna {
+  flex-direction: column;
+  width: 90%;
+  max-width: 100vw;
+  margin: 4% auto; /* Esto centra horizontalmente */
+  box-shadow: 0 2px 8px #0078a0;
+  border-radius: 12px;
+}
 
-    .galeria {
-        border-radius: 12px 12px 0 0;
-        padding: 5% 0 2% 0;
-        min-height: 180px;
-        flex: none;
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .galeria img {
-        width: 80vw;
-        max-width: 350px;
-        min-width: 120px;
-        height: auto;
-        border-radius: 10px;
-    }
-
-    .detalle {
-        flex: none;
-        width: 100%;
-        padding: 4vw 2vw;
-        font-size: 4vw;
-    }
-
-    .detalle p,
-    #contenido {
-        font-size: 4vw;
-        min-inline-size: 16px;
-        max-inline-size: 22px;
-    }
-
-    #precio {
-        font-size: 6vw;
-        min-inline-size: 20px;
-        max-inline-size: 32px;
-    }
-
-    #botonagendar {
-        font-size: 4vw;
-        min-inline-size: 14px;
-        max-inline-size: 18px;
-        width: 90%;
-        padding: 12px 0;
-    }
-
-  .header {
-    display: flex;
-    position: relative;
-    z-index: 100;
+  .galeria {
+    border-radius: 12px 12px 0 0;
+    padding: 5% 0 2% 0;
+    width: 100%;
   }
 
-  .header_container {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-    gap: 10px;
-  }
-
-  .header_logotext {
-     flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .header h1 {
-    font-size: 28px;
-  }
-
-  .header img {
-    width: 20%;
+  .galeria img {
+    width: 80vw;
+    max-width: 350px;
     height: auto;
-    object-fit: contain;
+    border-radius: 10px;
   }
 
-  .menu-alterno {
-    align-self: flex-end;
-    display: flex;
+  .detalle {
+    width: 100%;
+    padding: 4vw 2vw;
   }
-  
+
+  .detalle p,
+  #contenido {
+    font-size: 1.1rem;
+  }
+
+  #precio {
+    font-size: 1.4rem;
+  }
+
+  #botonagendar {
+    font-size: 1rem;
+    width: 90%;
+    padding: 12px 0;
+  }
+
+  .header { display: flex; z-index: 100; }
+  .header_container { flex-direction: column; align-items: flex-start; padding: 10px; gap: 10px; }
+  .header_logotext { flex-direction: column; align-items: center; text-align: center; }
+  .header h1 { font-size: 28px; }
+  .header img { width: 20%; }
+
+  .menu-alterno { align-self: flex-end; display: flex; }
+
   .header nav {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 100px; /* Ajusta según altura del header */
+    top: 100px;
     right: 0;
     width: 100%;
     background-color: #0078a0;
@@ -409,41 +286,17 @@
     z-index: 1000;
   }
 
-  /* Mostrar nav cuando está activo */
-  .header nav.active {
-    display: flex;
-  }
+  .header nav.active { display: flex; }
 
   .header nav a {
     padding: 12px 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     text-align: center;
-    color: #ffffff;
-    text-decoration: none;
     display: block;
     font-size: 16px;
   }
 
-  .header nav a:first-child {
-    border-top: none;
-  }
-
-  #servicios-dentales {
-    font-size: 20px;
-  }
-
-  .contenido p {
-    font-size: 18px;
-  }
-
-  .gallery h1 {
-    font-size: 24px;
-  }
-
-  .fila {
-    flex-wrap: wrap;
-    align-items: center;
-  }
+  .header nav a:first-child { border-top: none; }
 
   .footer table {
     font-size: 12px;
@@ -455,6 +308,7 @@
   .footer table tr td:nth-child(3) {
     display: none;
   }
+
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 220px);
@@ -464,13 +318,21 @@
 }
 
 @media (max-width: 500px) {
+  .detalle p,
+  #contenido {
+    font-size: 1rem;
+  }
 
-    .detalle { 
-        font-size: 4vw;
-    }
+  #precio {
+    font-size: 1.2rem;
+  }
+
+  #botonagendar {
+    font-size: 0.95rem;
+  }
 
   .footer table {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .footer table tr th:nth-child(2),
@@ -481,7 +343,8 @@
   }
 
   .gallery-grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(8, 220px);
   }
+
 }
