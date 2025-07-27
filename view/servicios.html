@@ -11,6 +11,7 @@
       src="https://kit.fontawesome.com/0edb134f6f.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/servicios.js"></script>
   </head>
   <header class="header">
     <div class="header_container">
@@ -237,6 +238,45 @@
       </div>
     </section>
 
+    <!-- Modal para detalles del servicio -->
+    <div id="serviceModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modalTitle">Nombre del Servicio</h2>
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <div class="service-detail">
+            <h3><i class="fas fa-info-circle"></i> Descripción</h3>
+            <p id="modalDescription">Descripción del servicio</p>
+          </div>
+          
+          <div class="service-detail">
+            <h3><i class="fas fa-dollar-sign"></i> Costo</h3>
+            <p id="modalCost">Costo del servicio</p>
+          </div>
+          
+          <div class="service-detail">
+            <h3><i class="fas fa-check-circle"></i> Beneficios</h3>
+            <ul id="modalBenefits">
+              <li>Beneficios del servicio</li>
+            </ul>
+          </div>
+          
+          <div class="service-detail">
+            <h3><i class="fas fa-exclamation-triangle"></i> Recomendaciones</h3>
+            <p id="modalRecommendations">Recomendaciones u observaciones</p>
+          </div>
+        </div>
+        
+        <div class="modal-footer">
+          <button id="agendarCitaBtn" class="btn-agendar">
+            <i class="fas fa-calendar-plus"></i> Agendar Cita
+          </button>
+        </div>
+      </div>
+    </div>
+
     <div class="clearfix"></div>
     <footer class="footer">
       <table>
@@ -287,6 +327,7 @@
       </table>
     </footer>
     <script>
+      // Menú hamburguesa
       const menuToggle = document.getElementById("menu-alterno");
       const nav = document.querySelector(".header nav");
 

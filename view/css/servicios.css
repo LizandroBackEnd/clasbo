@@ -1,7 +1,5 @@
-/* Importación de tipografía Roboto */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* Estilos sección Tratamientos */
 .tratamientos {
   padding: 40px 20px;
   text-align: center;
@@ -15,6 +13,7 @@
   margin-bottom: 10px;
   text-transform: uppercase;
   font-weight: bold;
+  font-family: "Roboto", sans-serif;
 }
 
 .titulo {
@@ -22,6 +21,7 @@
   font-weight: bold;
   margin-bottom: 40px;
   color: #222;
+  font-family: "Roboto", sans-serif;
 }
 
 .cards {
@@ -46,7 +46,7 @@
 }
 
 .card:hover {
-  background-color: #c1edfa;
+  background-color: #b2e4f2;
   box-shadow: 10px 10px 0 #d0e6f0;
   transform: translate(-5px, -5px);
   z-index: 1;
@@ -55,7 +55,7 @@
 .card .icono {
   font-size: 48px;
   margin-right: 20px;
-  color: #1ca4d4;
+  color: #0078a0;
   flex-shrink: 0;
 }
 
@@ -63,12 +63,15 @@
   font-size: 18px;
   margin: 0 0 8px;
   color: #333;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
 }
 
 .card .contenido p {
   font-size: 14px;
   color: #555;
   margin: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* --- Responsive --- */
@@ -96,5 +99,189 @@
 
   .card .contenido {
     align-items: center;
+  }
+}
+
+/* Estilos para el Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 0;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  animation: modalAppear 0.3s ease-out;
+  overflow: hidden;
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-header {
+  background-color: #00113d;
+  color: white;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+}
+
+.close {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.close:hover,
+.close:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+.modal-body {
+  padding: 25px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.service-detail {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.service-detail:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.service-detail h3 {
+  color: #0078a0;
+  font-size: 16px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+.service-detail p {
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.service-detail ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.service-detail li {
+  color: #555;
+  margin-bottom: 5px;
+  line-height: 1.5;
+  font-family: "Open Sans", sans-serif;
+}
+
+.modal-footer {
+  padding: 20px 25px;
+  background-color: #f8f9fa;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+
+.btn-agendar {
+  background-color: #0078a0;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(0, 120, 160, 0.3);
+}
+
+.btn-agendar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 120, 160, 0.4);
+  background-color: #005f7a;
+}
+
+.btn-agendar:active {
+  transform: translateY(0);
+}
+
+/* Responsive para el modal */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    margin: 10% auto;
+  }
+  
+  .modal-header {
+    padding: 15px 20px;
+  }
+  
+  .modal-header h2 {
+    font-size: 20px;
+  }
+  
+  .modal-body {
+    padding: 20px;
+    max-height: 350px;
+  }
+  
+  .modal-footer {
+    padding: 15px 20px;
+  }
+  
+  .btn-agendar {
+    padding: 10px 25px;
+    font-size: 14px;
   }
 }
