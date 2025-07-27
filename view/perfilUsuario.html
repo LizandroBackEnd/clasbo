@@ -50,8 +50,27 @@
 
     <!-- Bienvenida y perfil -->
     <div class="perfil-usuario">
-      <img src="./img/user.png" alt="Foto del Usuario" class="foto-perfil" />
+      <img src="./img/user.png" alt="Foto del Usuario" class="foto-perfil" id="foto-perfil" />
       <h2 class="bienvenida">¡Bienvenido/a, <span id="nombre-usuario">Usuario</span>!</h2>
+    </div>
+
+    <!-- Modal para cambiar foto de perfil -->
+    <div class="modal-overlay" id="modal-foto">
+      <div class="modal-content">
+        <button class="modal-close" id="modal-close">&times;</button>
+        <h3 class="modal-title">Cambiar Foto de Perfil</h3>
+        <div class="file-input-container">
+          <label for="file-input" class="file-input-label">
+            <i class="fas fa-upload"></i> Seleccionar Imagen
+          </label>
+          <input type="file" id="file-input" class="file-input" accept="image/*">
+        </div>
+        <div id="preview-container"></div>
+        <div class="modal-buttons">
+          <button class="btn-modal btn-confirm" id="btn-confirmar">Confirmar</button>
+          <button class="btn-modal btn-cancel" id="btn-cancelar">Cancelar</button>
+        </div>
+      </div>
     </div>
 
     <!-- Información principal -->
