@@ -51,16 +51,15 @@
                  <div class="detalle">
                         <p>Endodoncia</p> 
                         <p id="contenido">Tratamiento de conductos para salvar tus piezas dentales</p>
-                        <p id="precio"> $2,000 MXN</p>
-                         <button id="botonagendar" onclick="alert('proximamente')">Agendar</button>
+                        <p id="precio"> $1,000 MXN</p>
+                        <button id="botonagendar" onclick="window.location.href='citas.html'">Agendar</button>
                     </div>
             
 
             </div>
 
-            <footer class="footer">
+        <footer class="footer">
       <table>
-        <!--Tiene 3 etiquetas, tr (fila), th (encabezado columna), td (columna contenido)-->
         <tr>
           <th>Clínica Dental Clasbo</th>
           <th>Redes Sociales</th>
@@ -108,12 +107,31 @@
       </table>
     </footer>
     <script>
-      // Script para el menú alternativo
       const menuToggle = document.getElementById("menu-alterno");
       const nav = document.querySelector('.header nav');
 
       menuToggle.addEventListener("click", () => {
         nav.classList.toggle("active");
+        
+        // Agregar transición con delay para cada enlace
+        if (nav.classList.contains("active")) {
+          const links = nav.querySelectorAll('a');
+          links.forEach((link, index) => {
+            link.style.transitionDelay = `${index * 0.1}s`;
+          });
+        } else {
+          const links = nav.querySelectorAll('a');
+          links.forEach((link) => {
+            link.style.transitionDelay = '0s';
+          });
+        }
+      });
+
+      const navLinks = document.querySelectorAll('.header nav a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('active');
+        });
       });
     </script>
     </body>

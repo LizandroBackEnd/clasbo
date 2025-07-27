@@ -50,7 +50,7 @@
 }
 
 .detalle p {
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto";
     font-size: 1.8vw;
     letter-spacing: 0.5px;
     color: #00113d;
@@ -144,7 +144,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #0078a0;
+  background-color: #00113D;
   position: relative; /* Para el menú hamburguesa */
   padding: 0 1rem;
   transition: background-color 0.3s ease;
@@ -164,7 +164,7 @@
 
 .header a:hover,
 .header a:focus {
-  background-color: #00113d;
+  background-color: #0078A0;
   color: #b2e4f2;
   outline: none;
 }
@@ -215,7 +215,7 @@
 
 .footer {
   width: 100%;
-  background-color: #0078a0;
+  background-color: #00113D;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
   padding: 15px 5%;
@@ -225,6 +225,7 @@
   width: 100%;
   border-collapse: collapse; /* Une bordes */
   table-layout: fixed; /* Fuerza columnas iguales */
+  color: #ffffff; /* Ensure table text is white */
 }
 
 .footer th,
@@ -234,6 +235,7 @@
   vertical-align: top;
   text-align: center;
   word-break: break-word; /* Evita desbordes largos */
+  color: #ffffff; /* Ensure cell text is white */
 }
 
 /* Encabezados */
@@ -242,12 +244,14 @@
   font-weight: bold;
   padding-bottom: 10px;
   border-bottom: 1px solid #ffffff50;
+  color: #ffffff; /* Ensure header text is white */
 }
 
 /* Íconos */
 .footer i {
   margin-right: 8px;
   font-size: 16px;
+  color: #ffffff; /* Ensure icon color is white */
 }
 
 /* Íconos sociales */
@@ -256,10 +260,11 @@
   margin: 5px 8px 5px 0;
   cursor: pointer;
   transition: color 0.3s ease;
+  color: #ffffff; /* Ensure social icon color is white */
 }
 
 .footer i.fa-brands:hover {
-  color: #b2e4f2;
+  color: #2e96b3;
 }
 
 /* Enlaces dentro del footer */
@@ -274,10 +279,12 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  color: #ffffff; /* Ensure list text is white */
 }
 
 .footer ul li {
   margin-bottom: 5px;
+  color: #ffffff; /* Ensure list item text is white */
 }
 
 .whatsapp {
@@ -292,6 +299,7 @@
 
 #iniciar {
   float: right;
+  color: #ffffff; /* Ensure button/link text is white */
 }
 
 /* Index Responsivo */
