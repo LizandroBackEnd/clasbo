@@ -1,3 +1,6 @@
+/* =========================
+   Fuentes y Reset General
+========================= */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&display=swap");
 
 * {
@@ -12,29 +15,29 @@ body {
   background-color: #fff;
 }
 
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* HEADER (igual al index) */
+/* =========================
+   Encabezado (Header)
+========================= */
 .header {
   width: 100%;
   position: relative;
+  z-index: 100;
 }
 
 .header_container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px;
+  gap: 10px;
 }
 
 .header_logotext {
   display: flex;
   align-items: center;
-  gap: 10px;
   justify-content: center;
+  gap: 10px;
+  text-align: center;
 }
 
 .header_logotext img {
@@ -48,12 +51,15 @@ body {
   color: #000;
 }
 
+/* Navegación */
 .header nav {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   background-color: #0078a0;
+  padding: 0 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header nav a {
@@ -62,7 +68,8 @@ body {
   padding: 1rem 1.2rem;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 4px;
 }
 
 .header nav a:hover {
@@ -70,19 +77,37 @@ body {
   color: #b2e4f2;
 }
 
+/* =========================
+   Menú hamburguesa (solo móvil)
+========================= */
 .menu-alterno {
   display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-color: #0078a0;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  gap: 6px;
+  z-index: 1500;
+  padding: 8px;
 }
 
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #ffffff;
-  color: #000000;
-  margin: 0;
-  padding: 0;
+.menu-alterno span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
+/* =========================
+   Formulario de contacto
+========================= */
 .formulario-contacto {
   max-width: 600px;
   margin: 40px auto;
@@ -132,29 +157,130 @@ form button {
 form button:hover {
   background-color: #005f7a;
 }
+
+/* =========================
+   Pie de página (Footer)
+========================= */
+.footer {
+  width: 100%;
+  background-color: #0078a0;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  padding: 15px 5%;
+}
+
+.footer table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.footer th,
+.footer td {
+  width: 33.33%;
+  padding: 15px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.footer th {
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 1px solid #ffffff50;
+}
+
+.footer i {
+  margin-right: 8px;
+}
+
+.footer i.fa-brands {
+  font-size: 20px;
+  margin: 5px 8px 5px 0;
+  cursor: pointer;
+}
+
+.footer i.fa-brands:hover {
+  color: #b2e4f2;
+}
+
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li {
+  margin-bottom: 5px;
+}
+
+/* =========================
+   Responsive - Móvil
+========================= */
 @media (max-width: 768px) {
+  .header_logotext img {
+    width: 20%;
+  }
+
+  .header_logotext h1 {
+    font-size: 32px;
+  }
+
+  /* Mostrar menú hamburguesa */
+  .menu-alterno {
+    display: flex;
+    align-self: flex-end;
+  }
+
+  .header nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 100%;
+    background-color: #0078a0;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 8px 8px;
+    z-index: 1000;
+  }
+
+  .header nav.active {
+    display: flex;
+  }
+
+  .header nav a {
+    padding: 12px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    font-size: 16px;
+    display: block;
+  }
+
+  .header nav a:first-child {
+    border-top: none;
+  }
+
   .formulario-contacto {
     padding: 20px;
     margin: 20px;
   }
 
-  .formulario-contacto h2 {
-    font-size: 22px;
+  /* Footer: ocultar columnas 2 y 3 en móvil */
+  .footer table tr th:nth-child(2),
+  .footer table tr td:nth-child(2),
+  .footer table tr th:nth-child(3),
+  .footer table tr td:nth-child(3) {
+    display: none;
   }
 
-  form label {
-    font-size: 16px;
-  }
-
-  form input,
-  form textarea {
-    font-size: 14px;
-    padding: 8px;
-  }
-
-  form button {
-    font-size: 16px;
-    padding: 10px;
+  .footer table {
+    font-size: 12px;
   }
 }
 

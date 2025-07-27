@@ -127,6 +127,153 @@
   color : #000000;
 }
 
+/*Detalle consultas*/
+
+
+
+.FilaD {
+    width: 80%;
+    display: flex;
+    margin: 5% 10%; /* arriba y abajo, izquierda y derecha - espacio alrededor de la fila */
+
+}
+
+.columnaD {
+    width: 100%;
+    float: left;
+    margin: 2%;
+    display: flex;
+    flex-direction: column; /* Permite que los elementos se apilen verticalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    border-radius: 10px;
+}
+
+.galeriaD {
+    max-width: 100%;
+    padding: 2% 2%;
+}
+
+.galeriaD img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    border-radius: 8%;
+}
+
+.descD {
+    width: 100%;
+    height: auto;
+    font-family: sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    text-align: justify;
+    padding: 5%;
+}
+
+#precioD {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #000000;
+    font-weight: 600;
+}
+
+#nombreD {
+    font-family: Arial, Helvetica;
+    font-size: 30px;
+    color: #000000;
+    font-weight: 600; 
+}
+
+#botonD {
+    width:40%;
+    background-color: #0078A0;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+} 
+
+.botoncita {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+
+.FilaF {
+    width: 80%;
+    display: flex;
+    margin: 5% 10%; /* arriba y abajo, izquierda y derecha - espacio alrededor de la fila */
+
+}
+
+.columnaF {
+    width: 100%;
+    float: left;
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    border-radius: 10px;
+}
+
+.galeriaF {
+    max-width: 100%;
+    padding: 2% 2%;
+}
+
+.galeriaF img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    border-radius: 8%;
+}
+
+.descF {
+    width: 100%;
+    height: auto;
+    font-family: sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    text-align: justify;
+    padding: 5%;
+}
+
+#precioF {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #000000;
+    font-weight: 600;
+}
+
+#nombreF {
+    font-family: Arial, Helvetica;
+    font-size: 30px;
+    color: #000000;
+    font-weight: 600; 
+}
+
+#botonF {
+    width:40%;
+    background-color: #0078A0;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+} 
+
 @media (max-width: 768px) {
   #ofertas-especiales {
     font-size: 20px;
@@ -153,7 +300,7 @@
   }
 
   .ofertas {
-    flex: 1 1 calc(50% - 10px); /* 2 columnas */
+    flex: 1 1 calc(50% - 10px);
     padding: 6px;
   }
 
@@ -165,6 +312,47 @@
   }
 
   .filaP {
+    justify-content: center;
+  }
+
+  .FilaD,
+  .FilaF {
+    flex-direction: column;
+    width: 90%;
+    margin: 5% auto;
+  }
+
+  .columnaD,
+  .columnaF {
+    width: 100%;
+    margin: 2% 0;
+    align-items: center;
+  }
+
+  .descD,
+  .descF {
+    font-size: 14px;
+    padding: 4%;
+  }
+
+  #nombreD,
+  #nombreF {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  #precioD,
+  #precioF {
+    font-size: 18px;
+  }
+
+  #botonD,
+  #botonF {
+    width: 60%;
+    font-size: 14px;
+  }
+
+  .botoncita {
     justify-content: center;
   }
 }
@@ -196,7 +384,7 @@
   }
 
   .ofertas {
-    flex: 1 1 100%; /* 1 columna en móviles */
+    flex: 1 1 100%;
     padding: 4px;
   }
 
@@ -205,5 +393,35 @@
     max-width: 100%;
     margin: 3% auto;
     float: none;
+  }
+
+  .FilaD,
+  .FilaF {
+    flex-direction: column;
+    width: 95%;
+    margin: 5% auto;
+  }
+
+  .descD,
+  .descF {
+    font-size: 13px;
+    padding: 3%;
+  }
+
+  #nombreD,
+  #nombreF {
+    font-size: 20px;
+  }
+
+  #precioD,
+  #precioF {
+    font-size: 16px;
+  }
+
+  #botonD,
+  #botonF {
+    width: 70%;
+    font-size: 13px;
+    padding: 8px 16px;
   }
 }
