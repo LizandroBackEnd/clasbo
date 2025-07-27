@@ -3,6 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const feedback = document.querySelector("#form-feedback");
 
   function showMessage(type, message) {
+    if (!feedback) {
+      console.error("Element with ID 'form-feedback' not found");
+      console.log(type + ":", message);
+      return;
+    }
+    
     feedback.className = `form-feedback ${type}`; // clase para estilo
     feedback.textContent = message;
     feedback.style.display = "block";
@@ -16,8 +22,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  if (!form) {
+    console.error("Form with ID 'login-form' not found");
+    return;
+  }
+
+  if (!feedback) {
+    console.error("Element with ID 'form-feedback' not found");
+    return;
+  }
+
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
+
+    if (!form) {
+      console.error("Form with ID 'login-form' not found");
+      return;
+    }
 
     const formData = new FormData(form);
     const data = {
@@ -50,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
       showMessage("success", "¡Inicio de sesión exitoso! Redirigiendo...");
 
       setTimeout(() => {
-        window.location.href = "../user/profile.user.html";
+        window.location.href = "./perfilUsuario.html";
       }, 1500);
     } catch (error) {
       console.error("Error", error);

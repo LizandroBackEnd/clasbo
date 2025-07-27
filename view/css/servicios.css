@@ -1,0 +1,100 @@
+/* Importación de tipografía Roboto */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Estilos sección Tratamientos */
+.tratamientos {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.subtitulo {
+  color: red;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.titulo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: stretch;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  text-align: left;
+  position: relative;
+  cursor: pointer;
+  min-height: 150px;
+}
+
+.card:hover {
+  background-color: #c1edfa;
+  box-shadow: 10px 10px 0 #d0e6f0;
+  transform: translate(-5px, -5px);
+  z-index: 1;
+}
+
+.card .icono {
+  font-size: 48px;
+  margin-right: 20px;
+  color: #1ca4d4;
+  flex-shrink: 0;
+}
+
+.card .contenido h3 {
+  font-size: 18px;
+  margin: 0 0 8px;
+  color: #333;
+}
+
+.card .contenido p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card .icono {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .card .contenido {
+    align-items: center;
+  }
+}

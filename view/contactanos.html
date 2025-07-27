@@ -33,13 +33,23 @@
         </div>
 
         <nav>
-          <a href="./index.html"><i class="fas fa-home"></i> Inicio</a>
-          <a href="#"><i class="fas fa-tooth"></i> Servicios</a>
-          <a href="#"><i class="fas fa-stethoscope"></i> Especialistas</a>
+          <a href="./index.html"> <i class="fas fa-home"></i> Inicio </a>
+          <a href="./servicios.html">
+            <i class="fas fa-tooth"></i> Servicios
+          </a>
+          <a href="./Especialista.html"
+            ><i class="fas fa-stethoscope"></i> Especialistas</a
+          >
           <a href="./ofertas.html"><i class="fas fa-tags"></i> Ofertas</a>
-          <a href="./sobrenosotros.html"><i class="fas fa-users"></i> Sobre nosotros</a>
-          <a href="#"><i class="fas fa-calendar-alt"></i> Citas</a>
-          <a id="iniciar" href="./login.html"><i class="fas fa-user"></i> Iniciar Sesión</a>
+          <a href="./sobrenosotros.html">
+            <i class="fas fa-users"></i> Sobre nosotros
+          </a>
+          <a href="./citas.html">
+            <i class="fas fa-calendar-alt"></i> Citas
+          </a>
+          <a id="iniciar" href="./login.html"
+            ><i class="fas fa-user"></i> Iniciar Sesión
+          </a>
         </nav>
       </div>
     </header>
@@ -86,7 +96,7 @@
               15000 Ciudad de México, CDMX
             </a>
             <br />
-            <i class="fas fa-phone"></i> Teléfono: 55 3565 9327
+            <i class="fas fa-phone"></i> Teléfono: 55 3565 9327 <br />
           </td>
           <td>
             <i class="fa-brands fa-facebook"></i>
@@ -97,13 +107,18 @@
             <ul>
               <li>&#169; EDT - Elite Development Team, 2025</li>
               <li>
-                <a class="whatsapp" href="https://wa.me/525619298974" target="_blank"
+                <a
+                  class="whatsapp"
+                  href="https://wa.me/525619298974"
+                  target="_blank"
                   ><i class="fa-brands fa-whatsapp"></i> WhatsApp</a
                 >
               </li>
               <li><i class="fas fa-envelope"></i> Email:</li>
               <li>
-                <a class="correo" href="mailto:contacto@edt.com">contacto@edt.com</a>
+                <a class="correo" href="mailto:contacto@edt.com"
+                  >contacto@edt.com</a
+                >
               </li>
             </ul>
           </td>
@@ -111,12 +126,53 @@
       </table>
     </footer>
 
-    <!-- Script menú hamburguesa -->
+    <!-- Scripts -->
     <script>
+      // Menú alterno
       const menuToggle = document.getElementById("menu-alterno");
       const nav = document.querySelector(".header nav");
+
       menuToggle.addEventListener("click", () => {
         nav.classList.toggle("active");
+
+        const links = nav.querySelectorAll("a");
+        links.forEach((link, index) => {
+          link.style.transitionDelay = nav.classList.contains("active")
+            ? `${index * 0.1}s`
+            : "0s";
+        });
+      });
+
+      const navLinks = document.querySelectorAll(".header nav a");
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          nav.classList.remove("active");
+        });
+      });
+
+      // Mostrar mensaje de éxito y redirigir
+      document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const mensaje = document.createElement("div");
+        mensaje.textContent =
+          "✅ Gracias por tu mensaje. Ha sido enviado correctamente.";
+        mensaje.style.background = "#e0f7e9";
+        mensaje.style.color = "#2e7d32";
+        mensaje.style.padding = "15px";
+        mensaje.style.margin = "20px auto";
+        mensaje.style.textAlign = "center";
+        mensaje.style.borderRadius = "10px";
+        mensaje.style.fontSize = "18px";
+        mensaje.style.maxWidth = "600px";
+
+        const formulario = document.querySelector("form");
+        formulario.parentNode.insertBefore(mensaje, formulario);
+        formulario.reset();
+
+        setTimeout(() => {
+          window.location.href = "index.html";
+        }, 3000);
       });
     </script>
   </body>

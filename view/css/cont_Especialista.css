@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.filaE {
+    max-width: 100%;
+    margin: 2% 5%;
+    display: flex;
+}
+
+.columnaE {
+    margin: 1%;
+    width: 23%;
+    float: left; /* Permite que las columnas floten a la izquierda */
+    padding: 1%;
+    box-shadow: 0 4px 8px #0078A0;
+
+}
+
+.galeriaE {
+    max-width: 100%;
+    border: 2px;
+    padding: 5% 5%;
+}
+.galeriaE {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #00113D; /* Color del texto */
+}
+
+.galeriaE img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    object-fit: cover;
+    padding: 2%;
+    border-radius: 50%;  
+}
+
+.detalleE {
+    font-family: 'roboto' sans-serif;
+    font-size: 20px;
+    font-weight: 400; 
+    text-align: center;
+    color: #00113d;
+    padding: 3px;
+}
+.a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #00113D; /* Color del texto */
+    box-sizing: border-box;
+}
+.btnE {
+    background-color: #0078a0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+@media only screen and (max-width: 768px) {
+    .filaE {
+        flex-direction: column;
+    }
+    .columnaE {
+        width: 100%;
+        margin: 1% 0;
+        padding: 1%;
+    }
+    .galeriaE img {
+        width: 100%;
+        height: auto;
+        padding: 2%;
+        border-radius: 6%;
+    }
+    .columnaE {
+        width: 50%;
+        /* Hace que las columnas ocupen todo el ancho en pantallas pequeñas */
+        margin: 2% 0;
+        padding: 1%;
+    }
+    .detalleE {
+        font-size: 14px;
+        padding: 1px;
+    }
+    .btnE {
+        font-size: 14px;
+        padding: 7px 16px;
+    }
+}
+.filaD {
+    max-width: 80%;
+    margin: 3% 10%;
+    display: flex;
+    flex-wrap: wrap; /* Permite que las columnas se ajusten en varias filas si es necesario */
+    justify-content: center; /* Centra las columnas horizontalmente */
+    /*background-color:#b2e4f2;*/
+}
+.columnaD {
+    margin: 2%;
+    width: 46%;
+    display: flex;
+    float: left; /* Permite que las columnas floten a la izquierda */
+    padding: 1%;
+    font-family: 'roboto', sans-serif;
+    text-align: center;
+}
+.columnaD p{
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    color: #00113d;
+    padding: 10px;
+}
+
+.galeriaD {
+    max-width: 95%; /* Asegura que la galería ocupe todo el ancho disponible */
+    border: 2px;
+    border-radius: 10px;
+    padding: 5% 5%;
+}
+.galeriaD img{
+    width: 115%;
+    height: auto;
+    padding: 2%;
+    margin-top: 0px;
+    border-radius: 20%;
+}
+.descD {
+    max-width: 100%;
+    height: auto;
+    padding: 5%;
+    border-radius: 2px;
+    color: #0078a0;
+    font-family: 'roboto', sans-serif;
+    font-size: 2%;
+    text-align: justify; /* Justifica el texto para una mejor presentación */
+}
+.descD p {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: justify;
+    color: #00113d;
+    padding: 5px;
+}
+#precioD {
+    font-family: 'roboto', sans-serif ;
+    font-size: 1.9vw;
+    font-weight: 400;
+    text-align: center;
+    color: #000000;
+    padding: 5px;
+}
+
+@media only screen and (max-width: 970px) {
+    .filaE {
+        flex-wrap: wrap;
+        /* Permite que las columnas se envuelvan */
+        align-items: center;
+        /* Centra las columnas en la fila */
+    }
+
+    .columnaE {
+        width: 46%;
+        margin: 2%;
+    }
+    .columnaD {
+        width: 100%;
+        margin: 1% 0;
+        padding: 1%;
+    }
+    .galeriaD{
+        width: 75%;
+        height: auto;
+        padding: 0%;
+        border-radius: 6%;
+    }
+    .galeriaD img {
+        width: 65%;
+        height: auto;
+        padding: 2%;
+        border-radius: 6%;
+    }
+    .descD{
+        padding: 1% 5%;
+    }
+    .descD p{
+        font-size: 16px;
+        padding: 0px;
+    }
+}
+@media only screen and (max-width: 568px) {
+    .fila {
+        flex-direction: column;
+    }
+    .columnaD {
+        width: 100%;
+        margin: 1% 0;
+        padding: 1%;
+    }
+    .galeriaD{
+        width: 100%;
+        height: auto;
+        padding: 0%;
+        border-radius: 6%;
+    }
+    .galeriaD img {
+        width: 65%;
+        height: auto;
+        padding: 2%;
+        border-radius: 6%;
+    }
+    .descD{
+        padding: 1% 5%;
+    }
+    .descD p{
+        font-size: 12px;
+        padding: 0px;
+    }
+}

@@ -30,9 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const formData = new FormData(form);
     const data = {
-      name: formData.get("name"),
-      last_name: formData.get("last_name"),
-      second_last_name: formData.get("second_last_name"),
+      name: formData.get("name").toUpperCase(),
+      last_name: formData.get("last_name").toUpperCase(),
+      second_last_name: formData.get("second_last_name").toUpperCase(),
       email: formData.get("email"),
       date: formatDate(formData.get("date")),
       password: formData.get("password"),

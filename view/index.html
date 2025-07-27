@@ -32,8 +32,8 @@
 
       <nav>
         <a href="./index.html"> <i class="fas fa-home"></i> Inicio </a>
-        <a href="#"> <i class="fas fa-tooth"></i> Servicios </a>
-        <a href="#"><i class="fas fa-stethoscope"></i> Especialistas</a>
+        <a href="./servicios.html"> <i class="fas fa-tooth"></i> Servicios </a>
+        <a href="./Especialista.html"><i class="fas fa-stethoscope"></i> Especialistas</a>
         <a href="./ofertas.html"><i class="fas fa-tags"></i> Ofertas</a>
         <a href="./sobrenosotros.html"> <i class="fas fa-users"></i> Sobre nosotros </a>
         <a href="./citas.html"> <i class="fas fa-calendar-alt"></i> Citas </a>
@@ -42,8 +42,7 @@
       </div>
     </header>
     <div class="clearfix"></div>
-    <!--Contenido-->
-    <!--Banner-->
+  
     <div class="banner">
       <a href="./contactanos.html">
         <img src="img/banner.svg" alt="Banner de la clínica" />
@@ -63,7 +62,6 @@
       </p>
       <p></p>
     </div>
-    <!--Galeria de Productos-->
     <section class="gallery" id="gallery">
       <div class="gallery-grid">
         <a
@@ -158,7 +156,6 @@
     <div class="clearfix"></div>
     <footer class="footer">
       <table>
-        <!--Tiene 3 etiquetas, tr (fila), th (encabezado columna), td (columna contenido)-->
         <tr>
           <th>Clínica Dental Clasbo</th>
           <th>Redes Sociales</th>
@@ -206,12 +203,31 @@
       </table>
     </footer>
     <script>
-      // Script para el menú alternativo
       const menuToggle = document.getElementById("menu-alterno");
       const nav = document.querySelector('.header nav');
 
       menuToggle.addEventListener("click", () => {
         nav.classList.toggle("active");
+        
+        // Agregar transición con delay para cada enlace
+        if (nav.classList.contains("active")) {
+          const links = nav.querySelectorAll('a');
+          links.forEach((link, index) => {
+            link.style.transitionDelay = `${index * 0.1}s`;
+          });
+        } else {
+          const links = nav.querySelectorAll('a');
+          links.forEach((link) => {
+            link.style.transitionDelay = '0s';
+          });
+        }
+      });
+
+      const navLinks = document.querySelectorAll('.header nav a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('active');
+        });
       });
     </script>
   </body>
