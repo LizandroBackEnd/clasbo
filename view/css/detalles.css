@@ -335,20 +335,20 @@
     .detalle p,
     #contenido {
         font-size: 4vw;
-        min-font-size: 16px;
-        max-font-size: 22px;
+        min-inline-size: 16px;
+        max-inline-size: 22px;
     }
 
     #precio {
         font-size: 6vw;
-        min-font-size: 20px;
-        max-font-size: 32px;
+        min-inline-size: 20px;
+        max-inline-size: 32px;
     }
 
     #botonagendar {
         font-size: 4vw;
-        min-font-size: 14px;
-        max-font-size: 18px;
+        min-inline-size: 14px;
+        max-inline-size: 18px;
         width: 90%;
         padding: 12px 0;
     }
