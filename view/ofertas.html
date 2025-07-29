@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ofertas - Clínica Dental Clasbo</title>
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/ofertas.css" />
@@ -10,136 +10,161 @@
     <script
       src="https://kit.fontawesome.com/0edb134f6f.js"
       crossorigin="anonymous"></script>
+    <script src="./js/ofertas.js" defer></script>
   </head>
   <body>
     <header class="header">
       <div class="header_container">
         <div class="header_logotext">
-        <img src="img/logo.png" alt="Clasbo+" />
-        <h1>Clínica Dental Clasbo</h1>
-      </div>
-      <div
-        class="menu-alterno"
-        id="menu-alterno"
-        aria-label="Abrir menú"
-        role="button"
-        tabindex="0"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <nav>
-        <a href="./index.html"> <i class="fas fa-home"></i> Inicio </a>
-        <a href="./servicios.html"> <i class="fas fa-tooth"></i> Servicios </a>
-        <a href="./Especialista.html"><i class="fas fa-stethoscope"></i> Especialistas</a>
-        <a href="./ofertas.html"><i class="fas fa-tags"></i> Ofertas</a>
-        <a href="./sobrenosotros.html"> <i class="fas fa-users"></i> Sobre nosotros </a>
-        <a href="./citas.html"> <i class="fas fa-calendar-alt"></i> Citas </a>
-        <a id="iniciar" href="./login.html"><i class="fas fa-user"></i> Iniciar Sesión </a>
-      </nav>
+          <img src="img/logo.png" alt="Clasbo+" />
+          <h1>Clínica Dental Clasbo</h1>
+        </div>
+        <div
+          class="menu-alterno"
+          id="menu-alterno"
+          aria-label="Abrir menú"
+          role="button"
+          tabindex="0"
+        >
+          <span></span><span></span><span></span>
+        </div>
+        <nav>
+          <a href="./index.html"><i class="fas fa-home"></i> Inicio</a>
+          <a href="./servicios.html"><i class="fas fa-tooth"></i> Servicios</a>
+          <a href="./Especialista.html"><i class="fas fa-stethoscope"></i> Especialistas</a>
+          <a href="./ofertas.html"><i class="fas fa-tags"></i> Ofertas</a>
+          <a href="./sobrenosotros.html"><i class="fas fa-users"></i> Sobre nosotros</a>
+          <a href="./citas.html"><i class="fas fa-calendar-alt"></i> Citas</a>
+          <a id="iniciar" href="./login.html"><i class="fas fa-user"></i> Iniciar Sesión</a>
+        </nav>
       </div>
     </header>
+
     <!--Contenido-->
-    <!--Banner-->
     <div class="banner">
-      <a href="./contactanos.html">
+      <a href="./citas.html">
         <img src="img/ofertas/banner2.svg" alt="Banner de la clínica" />
       </a>
     </div>
+
     <div class="contenido">
       <h2 id="servicios-dentales">"Cuidamos tu sonrisa como si fuera la nuestra"</h2>
-         <h2 id="ofertas-especiales"><i class="fas fa-tags"></i> Ofertas Especiales</h2>
-         <p id="ofertas-intro">¡Aprovecha nuestras ofertas especiales en servicios dentales!</p>
+      <h2 id="ofertas-especiales"><i class="fas fa-tags"></i> Ofertas Especiales</h2>
+      <p id="ofertas-intro">¡Aprovecha nuestras ofertas especiales en servicios dentales!</p>
     </div>
-    <!--Galeria de Ofertas-->
-        <div class="cont_ofertas">
-            <div class="ofertas">
-              <a class="enlace" href="./ofertas/ofertas1.html">
-                <img src="img/ofertas/blanqueamiento.png" alt="Oferta 1">
-              </a>
-            </div>
-            <div class="ofertas">
-              <a class="enlace" href="./ofertas/ofertas2.html">
-                <img src="img/ofertas/limpieza.png" alt="Oferta 2">
-              </a>
-            </div>
-            <div class="ofertas">
-              <a class="enlace" href="./ofertas/ofertas3.html">
-                <img src="img/ofertas/ortodoncia.png" alt="Oferta 3">
-              </a>
-            </div>
-            <div class="ofertas">
-              <a class="enlace" href="./ofertas/ofertas4.html">
-                <img src="img/ofertas/implante_ofer.png" alt="Oferta 4">
-              </a>
-            </div>
-        </div>
-    <!--Galeria de Productos-->
-    <!--Primera Fila-->
+
+    <!-- Ofertas secundarias -->
+    <div class="cont_ofertas">
+      <div class="ofertas">
+        <img src="img/ofertas/blanqueamiento.png" alt="Blanqueamiento Dental" class="modal-trigger" />
+      </div>
+      <div class="ofertas">
+        <img src="img/ofertas/limpieza.png" alt="Limpieza Dental" class="modal-trigger" />
+      </div>
+      <div class="ofertas">
+        <img src="img/ofertas/ortodoncia.png" alt="Ortodoncia" class="modal-trigger" />
+      </div>
+      <div class="ofertas">
+        <img src="img/ofertas/implante_ofer.png" alt="Implantes Dentales" class="modal-trigger" />
+      </div>
+    </div>
+
+    <!-- Ofertas servicios dentales -->
     <div class="filaP">
-      <!--Primera Columna-->
       <div class="columnaP">
         <div class="galeriaP">
-          <a class="enlace" href="./ofertas/ofertas5.html">
-            <img src="img/ofertas/resinas_pro.png" alt="Oferta 5" />
-            <div class="detalleP">
-              <h2>Resinas</h2>
-              <p> Antes $1,300</p>
-              <p  id="precio_ofertas">Ahora $1,040</p>
-              <p id="descuento_ofertas">¡20% de descuento por tiempo limitado!</p>
-            </div>
-          </a>
+          <img src="img/ofertas/resinas_pro.png" alt="Resinas Estéticas" class="modal-trigger" />
+        </div>
+        <div class="detalleP">
+          <h2>Resinas</h2>
+          <p>Antes $1,300</p>
+          <p id="precio_ofertas">Ahora $1,040</p>
+          <p id="descuento_ofertas">¡20% de descuento por tiempo limitado!</p>
         </div>
       </div>
-      <!--Segunda Columna-->
       <div class="columnaP">
         <div class="galeriaP">
-          <a class="enlace" href="./ofertas/ofertas6.html">
-            <img src="img/ofertas/coronas_pro.png" alt="Oferta 6" />
-            <div class="detalleP">
-              <h2>Coronas de Zirconio</h2>
-              <p> Antes $2,500</p>
-              <p id="precio_ofertas">Ahora $1,875</p>
-              <p id="descuento_ofertas">¡20% de descuento por tiempo limitado!</p>
-            </div>
-          </a>
+          <img src="img/ofertas/coronas_pro.png" alt="Coronas de Zirconio" class="modal-trigger" />
+        </div>
+        <div class="detalleP">
+          <h2>Coronas de Zirconio</h2>
+          <p>Antes $2,500</p>
+          <p id="precio_ofertas">Ahora $1,875</p>
+          <p id="descuento_ofertas">¡20% de descuento por tiempo limitado!</p>
         </div>
       </div>
-      <!--Tercera Columna-->
       <div class="columnaP">
         <div class="galeriaP">
-          <a class="enlace" href="./ofertas/ofertas7.html">
-            <img src="img/ofertas/exoinfantil_pro.png" alt="Oferta 7" />
-            <div class="detalleP">
-              <h2>Exodoncia Infantil</h2>
-              <p> Antes $800</p>
-              <p id="precio_ofertas">Ahora $640</p>
-              <p id="descuento_ofertas">¡20% de descuento por tiempo limitado!</p>
-            </div>
-          </a>
+          <img src="img/ofertas/exoinfantil_pro.png" alt="Exodoncia Infantil" class="modal-trigger" />
+        </div>
+        <div class="detalleP">
+          <h2>Exodoncia Infantil</h2>
+          <p>Antes $800</p>
+          <p id="precio_ofertas">Ahora $640</p>
+          <p id="descuento_ofertas">¡20% de descuento por tiempo limitado!</p>
         </div>
       </div>
-      <!--Cuarta Columna-->
       <div class="columnaP">
         <div class="galeriaP">
-          <a class="enlace" href="./ofertas/ofertas8.html">
-            <img src="img/ofertas/alineadores_pro.png" alt="Oferta 8" />
-            <div class="detalleP">
-              <h2>Alineadores</h2>
-              <p> Antes $12,500</p>
-              <p id="precio_ofertas">Ahora $9,375</p>
-              <p id="descuento_ofertas">¡20% de descuento por tiempo limitado!</p>
-            </div>
-          </a>
+          <img src="img/ofertas/alineadores_pro.png" alt="Alineadores Transparentes" class="modal-trigger" />
+        </div>
+        <div class="detalleP">
+          <h2>Alineadores</h2>
+          <p>Antes $12,500</p>
+          <p id="precio_ofertas">Ahora $9,375</p>
+          <p id="descuento_ofertas">¡20% de descuento por tiempo limitado!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+
+    <div id="serviceModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modalTitle">Nombre del Servicio</h2>
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <div class="service-detail">
+            <h3><i class="fas fa-info-circle"></i> Descripción</h3>
+            <p id="modalDescripcion">Descripción del servicio</p>
+          </div>
+          
+          <div class="service-detail">
+            <h3><i class="fas fa-dollar-sign"></i> Costo</h3>
+            <p id="modalCosto">Costo del servicio</p>
+          </div>
+
+          <div class="service-detail">
+            <h3><i class="fas fa-calendar-alt"></i> Vigencia</h3>
+            <p id="modalVigencia">Vigencia del servicio</p>
+          </div>
+          
+          <div class="service-detail">
+            <h3><i class="fas fa-check-circle"></i> Beneficios</h3>
+            <ul id="modalBeneficios">
+              <li>Beneficios del servicio</li>
+            </ul>
+          </div>
+
+          <div class="service-detail">
+            <h3><i class="fas fa-exclamation-triangle"></i> Recomendaciones</h3>
+            <p id="modalRecommendaciones">Recomendaciones u observaciones</p>
+          </div>
+        </div>
+        
+        <div class="modal-footer">
+          <button id="agendarCitaBtn" class="btn-agendar">
+            <i class="fas fa-calendar-plus"></i> Agendar Cita
+          </button>
         </div>
       </div>
     </div>
     <div class="clearfix"></div>
-    <!--Footer-->
+    <!-- Footer -->
     <footer class="footer">
       <table>
-        <!--Tiene 3 etiquetas, tr (fila), th (encabezado columna), td (columna contenido)-->
         <tr>
           <th>Clínica Dental Clasbo</th>
           <th>Redes Sociales</th>
@@ -186,14 +211,15 @@
         </tr>
       </table>
     </footer>
+
     <script>
-      // menú alternativo
+      //menu hamburguesa
       const menuToggle = document.getElementById("menu-alterno");
-      const nav = document.querySelector('.header nav');
+      const nav = document.querySelector(".header nav");
 
       menuToggle.addEventListener("click", () => {
         nav.classList.toggle("active");
       });
-    </script>
-  </body>
-</html>
+      </script>
+    </body>
+  </html>

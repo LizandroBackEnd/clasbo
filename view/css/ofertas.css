@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+/*ofertas.html*/
+
 #ofertas-especiales {
   font-size: 28px;
   text-align: center;
@@ -127,152 +129,6 @@
   color : #000000;
 }
 
-/*Detalle consultas*/
-
-
-
-.FilaD {
-    width: 80%;
-    display: flex;
-    margin: 5% 10%; /* arriba y abajo, izquierda y derecha - espacio alrededor de la fila */
-
-}
-
-.columnaD {
-    width: 100%;
-    float: left;
-    margin: 2%;
-    display: flex;
-    flex-direction: column; /* Permite que los elementos se apilen verticalmente */
-    justify-content: center; /* Centra el contenido verticalmente */
-    align-items: center; /* Centra el contenido horizontalmente */
-    border-radius: 10px;
-}
-
-.galeriaD {
-    max-width: 100%;
-    padding: 2% 2%;
-}
-
-.galeriaD img {
-    width: 100%;
-    height: auto;
-    margin: auto;
-    border-radius: 8%;
-}
-
-.descD {
-    width: 100%;
-    height: auto;
-    font-family: sans-serif;
-    font-size: 16px;
-    letter-spacing: 0.5px;
-    color: #000000;
-    text-align: justify;
-    padding: 5%;
-}
-
-#precioD {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    color: #000000;
-    font-weight: 600;
-}
-
-#nombreD {
-    font-family: Arial, Helvetica;
-    font-size: 30px;
-    color: #000000;
-    font-weight: 600; 
-}
-
-#botonD {
-    width:40%;
-    background-color: #0078A0;
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    text-decoration: none;
-} 
-
-.botoncita {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-}
-
-
-.FilaF {
-    width: 80%;
-    display: flex;
-    margin: 5% 10%;
-
-}
-
-.columnaF {
-    width: 100%;
-    float: left;
-    margin: 2%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-    border-radius: 10px;
-}
-
-.galeriaF {
-    max-width: 100%;
-    padding: 2% 2%;
-}
-
-.galeriaF img {
-    width: 100%;
-    height: auto;
-    margin: auto;
-    border-radius: 8%;
-}
-
-.descF {
-    width: 100%;
-    height: auto;
-    font-family: sans-serif;
-    font-size: 16px;
-    letter-spacing: 0.5px;
-    color: #000000;
-    text-align: justify;
-    padding: 5%;
-}
-
-#precioF {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    color: #000000;
-    font-weight: 600;
-}
-
-#nombreF {
-    font-family: Arial, Helvetica;
-    font-size: 30px;
-    color: #000000;
-    font-weight: 600; 
-}
-
-#botonF {
-    width:40%;
-    background-color: #0078A0;
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    text-decoration: none;
-} 
 
 @media (max-width: 768px) {
   #ofertas-especiales {
@@ -315,46 +171,6 @@
     justify-content: center;
   }
 
-  .FilaD,
-  .FilaF {
-    flex-direction: column;
-    width: 90%;
-    margin: 5% auto;
-  }
-
-  .columnaD,
-  .columnaF {
-    width: 100%;
-    margin: 2% 0;
-    align-items: center;
-  }
-
-  .descD,
-  .descF {
-    font-size: 14px;
-    padding: 4%;
-  }
-
-  #nombreD,
-  #nombreF {
-    font-size: 24px;
-    text-align: center;
-  }
-
-  #precioD,
-  #precioF {
-    font-size: 18px;
-  }
-
-  #botonD,
-  #botonF {
-    width: 60%;
-    font-size: 14px;
-  }
-
-  .botoncita {
-    justify-content: center;
-  }
 }
 
 @media (max-width: 500px) {
@@ -395,33 +211,193 @@
     float: none;
   }
 
-  .FilaD,
-  .FilaF {
-    flex-direction: column;
+}
+
+/* Estilos para el Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 0;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  animation: modalAppear 0.3s ease-out;
+  overflow: hidden;
+}
+
+.modal-trigger {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-header {
+  background-color: #00113d;
+  color: white;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+}
+
+.close {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.close:hover,
+.close:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+.modal-body {
+  padding: 25px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.service-detail {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.service-detail:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.service-detail h3 {
+  color: #0078a0;
+  font-size: 16px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+.service-detail p {
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.service-detail ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.service-detail li {
+  color: #555;
+  margin-bottom: 5px;
+  line-height: 1.5;
+  font-family: "Open Sans", sans-serif;
+}
+
+.modal-footer {
+  padding: 20px 25px;
+  background-color: #f8f9fa;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+
+.btn-agendar {
+  background-color: #0078a0;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(0, 120, 160, 0.3);
+}
+
+.btn-agendar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 120, 160, 0.4);
+  background-color: #005f7a;
+}
+
+.btn-agendar:active {
+  transform: translateY(0);
+}
+
+/* Responsive para el modal */
+@media (max-width: 768px) {
+  .modal-content {
     width: 95%;
-    margin: 5% auto;
+    margin: 10% auto;
   }
-
-  .descD,
-  .descF {
-    font-size: 13px;
-    padding: 3%;
+  
+  .modal-header {
+    padding: 15px 20px;
   }
-
-  #nombreD,
-  #nombreF {
+  
+  .modal-header h2 {
     font-size: 20px;
   }
-
-  #precioD,
-  #precioF {
-    font-size: 16px;
+  
+  .modal-body {
+    padding: 20px;
+    max-height: 350px;
   }
-
-  #botonD,
-  #botonF {
-    width: 70%;
-    font-size: 13px;
-    padding: 8px 16px;
+  
+  .modal-footer {
+    padding: 15px 20px;
+  }
+  
+  .btn-agendar {
+    padding: 10px 25px;
+    font-size: 14px;
   }
 }
