@@ -2,7 +2,7 @@
 const ofertas = {
     "Blanqueamiento Dental": {
         descripcion: "Aprovecha un 25% de descuento en tu primera sesión de blanqueamiento dental.",
-        costo: "Precio regular: $1,200 MXN, Ahora $1,875 MXN",
+        costo: "Precio regular: $1,200 MXN, Ahora $900 MXN",
         vigencia: "Oferta válida hasta el 15 de agosto de 2025.",
         beneficios: [
             "Resultados visibles en una sola sesión",
@@ -24,7 +24,7 @@ const ofertas = {
     },
     "Ortodoncia": {
         descripcion: "Alinea tus dientes con un 20% de descuento en tratamientos de ortodoncia.",
-        costo: "Precio regular: $15,000 MXN, Ahora $12,000 MXN",
+        costo: "Precio regular: $14,000 MXN, Ahora $11,200 MXN",
         vigencia: "Oferta válida hasta el 30 de agosto de 2025.",
         beneficios: [
             "Mejora la alineación dental",
@@ -35,7 +35,7 @@ const ofertas = {
     },
     "Implantes Dentales": {
         descripcion: "Recupera tu sonrisa con un 20% de descuento en implantes dentales.",
-        costo: "Precio regular: $20,000 MXN, Ahora $16,000 MXN",
+        costo: "Precio regular: $22,500 MXN, Ahora $18,000 MXN",
         vigencia: "Oferta válida hasta el 30 de agosto de 2025.",
         beneficios: [
             "Solución permanente para dientes perdidos",
