@@ -251,10 +251,14 @@
 
 /*Footer*/
 
+.footer, 
+.footer * {
+  color: #ffffff !important;
+}
+
 .footer {
   width: 100%;
   background-color: #00113D;
-  color: #ffffff;
   font-family: "Roboto", sans-serif;
   padding: 15px 5%;
 }
@@ -279,7 +283,7 @@
   font-size: 18px;
   font-weight: bold;
   padding-bottom: 10px;
-  border-bottom: 1px solid #ffffff50;
+  border-bottom: 1px solid #ffffff;
 }
 
 /* Íconos */
@@ -297,12 +301,11 @@
 }
 
 .footer i.fa-brands:hover {
-  color: #2e96b3;
+  color: #0078a0 !important;
 }
 
 /* Enlaces dentro del footer */
 .footer a {
-  color: #ffffff;
   text-decoration: none;
   font-weight: 500;
 }
