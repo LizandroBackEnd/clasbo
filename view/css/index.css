@@ -441,7 +441,7 @@
 
   .columna {
     max-width: 46%;
-    margin: 2%;
+    margin: 2%; 
   }
 
   .footer table {
@@ -466,7 +466,8 @@
   .columna {
     width: 60%;
     margin: 2% 20%;
-    padding: 1%;
+    padding: 1%; 
+    margin-left: 50px;
   }
 
   .galeria {
